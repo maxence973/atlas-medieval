@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Italie 1310</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English+SC&display=swap">
+<link rel="stylesheet" href="atlas.css">
+</head><body>
+<script>
+window.ATLAS={
+eyebrow:"Atlas de l'Europe médiévale",
+title:"L'Italie en 1310",
+lede:"À l'automne 1310, Henri VII franchit les Alpes pour ceindre la couronne de fer et la couronne impériale. Il trouve une Italie déchirée entre Guelfes, fidèles au pape et aux Angevins de Naples, et Gibelins, partisans de l'empereur. Dante, exilé de Florence, salue sa venue. Les couleurs indiquent le camp de chaque puissance.",
+frame:{lon0:6.5,lat1:47.2,lonSpan:12.5,latSpan:10.7,midLat:42,K:80},
+borderLabel:"Limite du royaume d'Italie impérial",borderToggle:"Royaume d'Italie",
+kLabels:["Souveraineté","Royaume d'Italie (Saint-Empire)","Hors du royaume d'Italie"],
+cats:{
+ guelfe:{label:"Communes et seigneurs guelfes",sub:"Alliés du pape et des Angevins",color:"#c4473a"},
+ gibelin:{label:"Communes et seigneurs gibelins",sub:"Partisans de l'empereur",color:"#6e6b76"},
+ autre:{label:"Pouvoirs partagés ou neutres",sub:"Villes divisées, princes ecclésiastiques, marquis",color:"#cbbd9c"},
+ angevin:{label:"Angevins de Naples",sub:"Royaume de Sicile péninsulaire et Provence",color:"#2d4f9e",lys:true},
+ sicile:{label:"Royaume de Trinacrie",sub:"Sicile aragonaise de Frédéric III",color:"#e0973a"},
+ eglise:{label:"États de l'Église",sub:"Terres du pape, alors à Avignon",color:"#e8d68a"},
+ venise:{label:"Venise",sub:"Dogado et comptoirs de l'Adriatique",color:"#2b8e86"},
+ empire:{label:"Saint-Empire au nord des Alpes",sub:"Hors du royaume d'Italie",color:"#8fae84"},
+ out:{label:"Autres États",sub:"",color:"#cfcabd",out:true}
+},
+catOrder:["guelfe","gibelin","autre","angevin","sicile","eglise","venise","empire","out"],
+regions:[
+ /* Piémont et Ligurie */
+ {id:"savoie",s:"Savoie",n:"Comté de Savoie (versant italien)",c:"gibelin",k:0,h:"Amédée V le Grand",cap:"Chambéry",t:"Le comte accueille Henri VII et l'accompagne en Italie. Le val d'Aoste et la vallée de Suse lui appartiennent.",p:[[6.9,45.6],[7.32,45.74],[7.05,45.15],[6.6,46.3],[6.6,45.4]]},
+ {id:"achaie",s:"Piémont",n:"Piémont savoyard (Savoie-Achaïe)",c:"gibelin",k:1,h:"Philippe de Savoie, prince d'Achaïe",cap:"Turin, Pignerol",t:"",p:[[7.68,45.07],[7.4,44.85],[7.65,44.7],[7.85,45.4]]},
+ {id:"saluces",s:"Saluces",n:"Marquisat de Saluces",c:"autre",k:1,h:"Manfred IV de Saluces",cap:"Saluces",t:"",p:[[7.49,44.62],[7.25,44.5]]},
+ {id:"piemont-ang",s:"Coni",n:"Piémont angevin (Coni, Alba)",c:"angevin",k:1,h:"Robert d'Anjou, roi de Naples",cap:"Coni",t:"Terres piémontaises des comtes de Provence.",p:[[7.55,44.39],[8.03,44.7],[7.82,44.39]]},
+ {id:"montferrat",s:"Montferrat",n:"Marquisat de Montferrat",c:"gibelin",k:1,h:"Théodore Ier Paléologue (1306‑1338)",cap:"Casale",t:"Fils de l'empereur byzantin Andronic II.",p:[[8.45,45.13],[8.47,44.68],[8.2,45.05]]},
+ {id:"asti",s:"Asti",n:"Commune d'Asti",c:"guelfe",k:1,h:"Les Solaro",cap:"Asti",t:"Ville de banquiers et de prêteurs.",p:[[8.2,44.9]]},
+ {id:"alexandrie",s:"Alexandrie",n:"Commune d'Alexandrie",c:"autre",k:1,h:"",cap:"Alexandrie",t:"Fondée en 1168 contre Frédéric Barberousse.",p:[[8.62,44.91]]},
+ {id:"tortone",s:"Tortone",n:"Commune de Tortone",c:"autre",k:1,h:"",cap:"Tortone",t:"",p:[[8.86,44.9]]},
+ {id:"verceil",s:"Verceil",n:"Commune de Verceil",c:"autre",k:1,h:"Avogadro (guelfes) contre Tizzoni (gibelins)",cap:"Verceil",t:"",p:[[8.42,45.32],[8.05,45.55]]},
+ {id:"novare",s:"Novare",n:"Commune de Novare",c:"autre",k:1,h:"",cap:"Novare",t:"",p:[[8.62,45.45],[8.45,45.78]]},
+ {id:"genes",s:"Gênes",n:"République de Gênes et Corse",c:"autre",k:1,h:"Doria et Spinola, contre les Fieschi et les Grimaldi",cap:"Gênes",lp:[8.7,44.35],
+  t:"Grande puissance maritime, victorieuse de Pise (la Meloria, 1284) et de Venise (Curzola, 1298). Lasse de ses factions, elle se donne à Henri VII pour vingt ans en 1311.",p:[[8.93,44.41],[8.48,44.31],[8.2,44.05],[7.75,43.82],[9.3,44.32],[9.6,44.2],[9.1,42.2],[9.35,42.65],[8.95,41.75]]},
+ {id:"lunigiana",s:"Lunigiana",n:"Lunigiana (marquis Malaspina)",c:"autre",k:1,h:"Les Malaspina",cap:"Fosdinovo",t:"Moroello Malaspina, guelfe, a accueilli Dante en exil en 1306.",p:[[9.95,44.3]]},
+ /* Lombardie */
+ {id:"milan",s:"Milan",n:"Commune de Milan",c:"guelfe",k:1,h:"Guido della Torre",cap:"Milan",t:"La plus grande ville d'Italie du Nord. Henri VII y reçoit la couronne de fer le 6 janvier 1311 ; les Della Torre se révoltent, et Matteo Visconti, gibelin, devient vicaire impérial.",p:[[9.19,45.46],[8.95,45.62],[9.3,45.6]]},
+ {id:"come",s:"Côme",n:"Commune de Côme",c:"gibelin",k:1,h:"Les Rusca",cap:"Côme",t:"",p:[[9.08,45.81],[9.25,46.1]]},
+ {id:"bergame",s:"Bergame",n:"Commune de Bergame",c:"autre",k:1,h:"Suardi (gibelins) contre Colleoni (guelfes)",cap:"Bergame",t:"",p:[[9.67,45.7],[9.8,45.95]]},
+ {id:"brescia",s:"Brescia",n:"Commune de Brescia",c:"guelfe",k:1,h:"Tebaldo Brusati",cap:"Brescia",t:"Révoltée contre Henri VII, elle subit un terrible siège de mai à septembre 1311.",p:[[10.22,45.54],[10.3,45.8]]},
+ {id:"lodi",s:"Lodi",n:"Commune de Lodi",c:"guelfe",k:1,h:"Les Vistarini",cap:"Lodi",t:"",p:[[9.5,45.31]]},
+ {id:"pavie",s:"Pavie",n:"Commune de Pavie",c:"guelfe",k:1,h:"Les Langosco",cap:"Pavie",t:"Ancienne capitale du royaume lombard.",p:[[9.16,45.19],[9.0,45.0]]},
+ {id:"cremone",s:"Crémone",n:"Commune de Crémone",c:"guelfe",k:1,h:"Les Cavalcabò",cap:"Crémone",t:"Elle se soumet puis se révolte contre l'empereur en 1311.",p:[[10.02,45.13],[9.85,45.25]]},
+ {id:"plaisance",s:"Plaisance",n:"Commune de Plaisance",c:"guelfe",k:1,h:"Alberto Scotto",cap:"Plaisance",t:"",p:[[9.69,45.05],[9.6,44.8]]},
+ {id:"mantoue",s:"Mantoue",n:"Seigneurie de Mantoue",c:"gibelin",k:1,h:"Les Bonacolsi",cap:"Mantoue",t:"",p:[[10.79,45.16],[10.55,45.05]]},
+ {id:"verone",s:"Vérone",n:"Seigneurie de Vérone",c:"gibelin",k:1,h:"Alboino et Cangrande della Scala",cap:"Vérone",t:"Cangrande, vicaire impérial en 1311, deviendra le protecteur de Dante, qui lui dédiera le Paradis.",p:[[10.99,45.44],[11.2,45.6],[10.75,45.65]]},
+ {id:"padoue",s:"Padoue",n:"Commune de Padoue (et Vicence)",c:"guelfe",k:1,h:"La commune guelfe",cap:"Padoue",t:"Padoue domine Vicence, que Cangrande lui arrachera en 1311. Giotto vient d'y peindre la chapelle des Scrovegni.",p:[[11.88,45.41],[11.7,45.25],[11.55,45.55]]},
+ {id:"trevise",s:"Trévise",n:"Commune de Trévise",c:"guelfe",k:1,h:"Rizzardo da Camino",cap:"Trévise",t:"",p:[[12.24,45.67],[12.35,45.9]]},
+ {id:"feltre",s:"Feltre",n:"Évêchés de Feltre et Bellune",c:"autre",k:1,h:"L'évêque",cap:"Feltre",t:"",p:[[11.9,46.02],[12.22,46.14]]},
+ {id:"aquilee",s:"Aquilée",n:"Patriarcat d'Aquilée (Frioul et Istrie)",c:"autre",k:1,h:"Le patriarche Ottobono de' Razzi",cap:"Udine",lp:[13.1,46.1],t:"Principauté ecclésiastique, à la jonction de l'Italie et du monde germanique.",p:[[13.35,45.77],[13.23,46.06],[12.85,46.15],[13.0,46.45],[13.85,45.35]]},
+ /* Émilie */
+ {id:"parme",s:"Parme",n:"Commune de Parme",c:"guelfe",k:1,h:"Giberto da Correggio",cap:"Parme",t:"",p:[[10.33,44.8],[10.2,44.55]]},
+ {id:"reggio",s:"Reggio",n:"Commune de Reggio",c:"guelfe",k:1,h:"",cap:"Reggio",t:"Elle a chassé les Este en 1306.",p:[[10.63,44.7]]},
+ {id:"modene",s:"Modène",n:"Commune de Modène",c:"guelfe",k:1,h:"",cap:"Modène",t:"Elle a chassé les Este en 1306.",p:[[10.93,44.65],[10.85,44.35]]},
+ {id:"bologne",s:"Bologne",n:"Commune de Bologne",c:"guelfe",k:1,h:"La commune guelfe, sous la souveraineté pontificale",cap:"Bologne",t:"Siège de la plus ancienne université d'Europe.",p:[[11.34,44.49],[11.1,44.4],[11.3,44.2]]},
+ {id:"ferrare",s:"Ferrare",n:"Ferrare",c:"eglise",k:0,h:"Le pape, depuis la guerre contre Venise (1308‑1309)",cap:"Ferrare",t:"Les Este en ont été chassés ; ils la reprendront en 1317.",p:[[11.62,44.84],[11.9,44.75],[11.4,44.88]]},
+ {id:"romagne",s:"Romagne",n:"Romagne",c:"eglise",k:0,h:"Le recteur pontifical ; Malatesta à Rimini, Ordelaffi à Forlì",cap:"Forlì, Ravenne, Rimini",t:"",p:[[12.04,44.22],[12.2,44.42],[12.57,44.06],[11.88,44.28],[12.24,44.14],[11.7,44.35]]},
+ {id:"saint-marin",s:"Saint‑Marin",n:"Commune de Saint-Marin",c:"autre",k:0,h:"La commune",cap:"Saint-Marin",t:"Minuscule république du mont Titano, qui défend déjà son indépendance.",p:[[12.45,43.93]]},
+ /* Toscane */
+ {id:"florence",s:"Florence",n:"Commune de Florence",c:"guelfe",k:1,h:"Les Guelfes noirs",cap:"Florence",t:"Première puissance financière d'Italie. Elle a exilé Dante en 1302 et sera l'ennemie acharnée d'Henri VII, qui l'assiège en vain en 1312.",p:[[11.25,43.77],[11.4,43.95],[11.1,43.6],[11.55,43.62],[11.05,43.85]]},
+ {id:"lucques",s:"Lucques",n:"Commune de Lucques",c:"guelfe",k:1,h:"",cap:"Lucques",t:"Ville de la soie.",p:[[10.5,43.84],[10.4,44.1]]},
+ {id:"pistoia",s:"Pistoia",n:"Commune de Pistoia",c:"guelfe",k:1,h:"Sous la tutelle de Florence et de Lucques",cap:"Pistoia",t:"Berceau de la querelle des Blancs et des Noirs.",p:[[10.92,43.93]]},
+ {id:"pise",s:"Pise",n:"Commune de Pise",c:"gibelin",k:1,h:"La commune gibeline",cap:"Pise",t:"Grand appui d'Henri VII en Toscane ; l'empereur sera enterré dans sa cathédrale en 1313.",p:[[10.4,43.72],[10.6,43.45],[10.55,43.15]]},
+ {id:"volterra",s:"Volterra",n:"Commune de Volterra",c:"guelfe",k:1,h:"",cap:"Volterra",t:"",p:[[10.86,43.4]]},
+ {id:"sienne",s:"Sienne",n:"Commune de Sienne",c:"guelfe",k:1,h:"Le gouvernement des Neuf",cap:"Sienne",t:"Duccio y achève la Maestà en 1311.",p:[[11.33,43.32],[11.6,43.05],[11.0,43.1],[11.6,43.3]]},
+ {id:"arezzo",s:"Arezzo",n:"Commune d'Arezzo",c:"gibelin",k:1,h:"",cap:"Arezzo",t:"Refuge des gibelins de Toscane.",p:[[11.88,43.46],[11.8,43.72]]},
+ {id:"aldobrandeschi",s:"Aldobrandeschi",n:"Comtés des Aldobrandeschi",c:"autre",k:1,h:"Comtes de Santa Fiora et de Sovana",cap:"Sovana",t:"",p:[[11.6,42.75],[11.25,42.5]]},
+ /* États de l'Église */
+ {id:"urbino",s:"Urbino",n:"Montefeltro et Urbino",c:"gibelin",k:0,h:"Les comtes de Montefeltro",cap:"Urbino",t:"Seigneurs gibelins au cœur des terres pontificales.",p:[[12.64,43.73],[12.35,43.8]]},
+ {id:"marche",s:"Marche d'Ancône",n:"Marche d'Ancône",c:"eglise",k:0,h:"Le recteur pontifical",cap:"Ancône",t:"",p:[[13.51,43.62],[13.45,43.3],[13.58,42.85],[13.0,43.6],[13.25,43.5],[13.1,43.2]]},
+ {id:"perouse",s:"Pérouse",n:"Commune de Pérouse",c:"guelfe",k:0,h:"La commune guelfe",cap:"Pérouse",t:"Commune puissante et quasi indépendante dans les terres du pape ; Clément V y a été élu en 1305.",p:[[12.39,43.11],[12.1,43.2],[12.6,43.32]]},
+ {id:"spolete",s:"Spolète",n:"Duché de Spolète",c:"eglise",k:0,h:"Le recteur pontifical",cap:"Spolète",t:"",p:[[12.73,42.74],[12.8,42.95],[13.1,42.79],[12.65,42.56],[12.6,43.07]]},
+ {id:"patrimoine",s:"Patrimoine",n:"Patrimoine de Saint-Pierre",c:"eglise",k:0,h:"Le recteur pontifical",cap:"Viterbe",t:"Orvieto, Viterbe, Civitavecchia.",p:[[12.1,42.42],[11.8,42.1],[11.9,42.72],[12.52,42.52],[11.55,42.55]]},
+ {id:"rome",s:"Rome",n:"Rome",c:"eglise",k:0,h:"Le Sénat romain ; Colonna, Orsini et Caetani",cap:"Rome",t:"Sans pape depuis 1305. En 1312, Henri VII devra y être couronné au Latran, Saint-Pierre étant tenu par les troupes angevines.",p:[[12.48,41.9],[12.3,41.75],[12.8,41.96]]},
+ {id:"campagne",s:"Campagne",n:"Campagne et Maritime",c:"eglise",k:0,h:"Le recteur pontifical",cap:"Anagni",t:"Anagni, où Boniface VIII a été humilié par les hommes de Philippe le Bel en 1303.",p:[[13.15,41.73],[13.35,41.64],[13.25,41.29],[12.9,41.5]]},
+ {id:"benevent",s:"Bénévent",n:"Bénévent",c:"eglise",k:0,h:"Le pape",cap:"Bénévent",t:"Enclave pontificale dans le royaume de Naples.",p:[[14.78,41.13]]},
+ /* Royaume de Naples */
+ {id:"labour",s:"Terre de Labour",n:"Terre de Labour et Principauté",c:"angevin",k:0,h:"Robert d'Anjou, roi de Sicile (Naples) depuis 1309",cap:"Naples",
+  t:"Le cœur du royaume angevin. Robert le Sage, couronné à Avignon en 1309, est le chef du parti guelfe en Italie et l'adversaire principal d'Henri VII.",p:[[14.25,40.85],[14.05,41.07],[13.81,41.49],[14.75,40.68],[14.8,40.92],[15.2,40.3],[14.5,41.3]]},
+ {id:"abruzzes",s:"Abruzzes",n:"Abruzzes",c:"angevin",k:0,h:"Robert d'Anjou",cap:"L'Aquila",t:"",p:[[13.4,42.35],[14.2,42.45],[13.7,42.66],[13.93,42.05],[14.65,42.1],[13.5,41.95]]},
+ {id:"capitanate",s:"Capitanate",n:"Molise et Capitanate",c:"angevin",k:0,h:"Robert d'Anjou",cap:"Foggia",t:"La colonie sarrasine de Lucera a été détruite en 1300.",p:[[14.67,41.56],[15.55,41.46],[15.92,41.7],[15.15,41.9],[15.09,41.15]]},
+ {id:"pouilles",s:"Pouilles",n:"Terre de Bari et Terre d'Otrante",c:"angevin",k:0,h:"Robert d'Anjou",cap:"Bari",t:"",p:[[16.87,41.12],[16.3,41.3],[17.5,40.8],[17.95,40.65],[18.17,40.35],[18.4,40.0],[17.25,40.47],[16.55,40.83]]},
+ {id:"basilicate",s:"Basilicate",n:"Basilicate",c:"angevin",k:0,h:"Robert d'Anjou",cap:"Potenza",t:"",p:[[15.8,40.64],[16.6,40.67],[16.0,40.2],[15.65,40.95]]},
+ {id:"calabre",s:"Calabre",n:"Calabre",c:"angevin",k:0,h:"Robert d'Anjou",cap:"Cosenza",t:"",p:[[16.25,39.3],[16.6,38.9],[15.65,38.1],[16.3,38.4],[16.2,39.8],[17.1,39.1],[15.95,38.65],[16.63,39.58]]},
+ {id:"sicile",s:"Trinacrie",n:"Royaume de Trinacrie (Sicile)",c:"sicile",k:0,h:"Frédéric III d'Aragon",cap:"Palerme",lp:[14.1,37.6],
+  t:"Depuis les Vêpres siciliennes (1282), l'île a rejeté les Angevins. La paix de Caltabellotta (1302) laisse la Sicile à Frédéric sous le nom de « Trinacrie ». Frédéric soutient Henri VII.",
+  p:[[13.36,38.12],[12.5,38.02],[12.6,37.65],[13.58,37.31],[14.25,37.07],[15.1,37.5],[15.25,37.07],[15.55,38.19],[14.3,37.95],[14.28,37.57],[13.0,37.8],[14.9,37.8],[13.9,37.5],[14.73,36.93]]},
+ {id:"provence",s:"Provence",n:"Comté de Provence (Nice)",c:"angevin",k:0,h:"Robert d'Anjou",cap:"Aix",t:"Avignon, où réside le pape, appartient aussi au comte de Provence.",p:[[7.27,43.72],[6.9,43.95],[6.74,43.43],[6.65,44.3]]},
+ /* Sardaigne */
+ {id:"sard-pise",s:"Sardaigne pisane",n:"Cagliari et Gallura (Pise)",c:"gibelin",k:1,h:"La commune de Pise",cap:"Cagliari",t:"Le pape a inféodé la Sardaigne au roi d'Aragon en 1297 ; la conquête aragonaise commencera en 1323.",p:[[9.1,39.25],[8.53,39.31],[9.6,39.85],[9.5,40.9],[9.3,41.1],[9.65,40.6]]},
+ {id:"arborea",s:"Arborée",n:"Judicat d'Arborée",c:"autre",k:0,h:"Les juges d'Arborée",cap:"Oristano",t:"Dernier des quatre royaumes sardes indépendants.",p:[[8.6,39.9],[8.85,40.1],[8.9,39.7]]},
+ {id:"sassari",s:"Sassari",n:"Sassari et Logudoro",c:"autre",k:0,h:"Commune de Sassari ; Doria et Malaspina",cap:"Sassari",t:"",p:[[8.56,40.73],[8.3,40.56],[8.9,40.6]]},
+ /* Venise */
+ {id:"venise",s:"Venise",n:"République de Venise",c:"venise",k:0,h:"Le doge Pietro Gradenigo (1289‑1311)",cap:"Venise",lp:[12.4,45.4],
+  t:"Hors du royaume d'Italie. Excommuniée en 1309 après sa guerre pour Ferrare, Venise réprime en 1310 la conjuration de Bajamonte Tiepolo et crée le Conseil des Dix.",p:[[12.33,45.44],[12.2,45.22],[12.6,45.55]]},
+ {id:"istrie-ven",s:"Istrie",n:"Istrie vénitienne",c:"venise",k:0,h:"Venise",cap:"Capodistria",t:"Capodistria, Parenzo et les ports de la côte.",p:[[13.57,45.53],[13.6,45.23]]},
+ {id:"zara",s:"Zara",n:"Zara",c:"venise",k:0,h:"Venise",cap:"Zara",t:"Elle se révoltera en 1311 pour se donner au roi de Hongrie.",p:[[15.23,44.12]]},
+ {id:"raguse",s:"Raguse",n:"Raguse",c:"venise",k:0,h:"Comte vénitien",cap:"Raguse",t:"Sous suzeraineté vénitienne de 1205 à 1358.",p:[[18.1,42.65]]},
+ /* Empire au nord */
+ {id:"tyrol",s:"Tyrol",n:"Comté de Tyrol et évêchés de Trente et Brixen",c:"empire",k:0,h:"Henri de Carinthie ; les évêques de Trente et de Brixen",cap:"Merano, Trente",t:"",p:[[11.15,46.67],[11.33,46.5],[11.4,47.15],[10.6,47.1],[11.12,46.07],[11.04,45.89],[10.85,46.3],[11.66,46.71],[11.94,46.79],[12.3,47.0]]},
+ {id:"goritz",s:"Goritz",n:"Comté de Goritz",c:"empire",k:0,h:"Henri III de Goritz",cap:"Goritz",t:"",p:[[13.62,45.94],[13.93,45.24]]},
+ {id:"carinthie",s:"Carinthie",n:"Carinthie et Carniole",c:"empire",k:0,h:"Henri de Carinthie",cap:"Saint-Veit",t:"",p:[[14.31,46.62],[13.85,46.6],[14.5,46.05],[14.2,45.75],[14.9,45.8],[13.2,46.75]]},
+ {id:"styrie",s:"Styrie",n:"Styrie (Habsbourg)",c:"empire",k:0,h:"Frédéric le Beau",cap:"Graz",t:"",p:[[15.44,47.07],[14.66,47.17],[15.65,46.56],[16.08,47.05]]},
+ {id:"suisse",s:"Suisse",n:"Valais, Waldstätten et Grisons",c:"empire",k:0,h:"Évêques de Sion et de Coire, communautés de vallée",cap:"",t:"",p:[[7.36,46.23],[8.0,46.6],[8.5,46.9],[9.53,46.85],[9.8,46.6],[7.45,46.95]]},
+ {id:"dauphine",s:"Dauphiné",n:"Dauphiné",c:"empire",k:0,h:"Jean II, dauphin",cap:"Grenoble",t:"",p:[[6.64,44.9],[6.6,44.6]]},
+ /* Hors */
+ {id:"hongrie",s:"Hongrie‑Croatie",n:"Royaume de Hongrie et Croatie",c:"out",k:0,h:"Charles Robert d'Anjou",lp:[16.5,45.3],t:"",p:[[16.0,45.81],[15.5,45.3],[16.6,45.4],[15.3,44.6],[16.2,44.1],[16.4,43.55],[17.2,45.0],[17.0,46.3],[18.0,46.5],[18.5,45.5],[16.6,47.0],[17.6,47.0],[18.7,47.0],[14.9,45.05]]},
+ {id:"bosnie",s:"Bosnie",n:"Banat de Bosnie",c:"out",k:0,h:"",t:"",p:[[17.8,44.2],[18.4,43.85],[17.5,43.4]]},
+ {id:"serbie",s:"Serbie",n:"Royaume de Serbie",c:"out",k:0,h:"Étienne Milutin",t:"",p:[[18.9,42.6],[18.8,43.3],[18.95,44.0]]},
+ {id:"tunis",s:"Tunis",n:"Sultanat hafside",c:"out",k:0,h:"",t:"",p:[[9.5,36.9],[10.5,36.7]]}
+],
+points:[
+ ["Rome",12.48,41.9,"ville","",1],["Naples",14.25,40.85,"ville","Capitale des Angevins.",1],["Palerme",13.36,38.12,"ville","",1],["Milan",9.19,45.46,"ville","",1],["Venise",12.33,45.44,"ville","",1],
+ ["Florence",11.25,43.77,"ville","",1],["Gênes",8.93,44.41,"ville","",1],["Pise",10.4,43.72,"ville","",1],["Bologne",11.34,44.49,"ville","",1],
+ ["Turin",7.68,45.07,"ville",""],["Asti",8.2,44.9,"ville",""],["Pavie",9.16,45.19,"ville",""],["Brescia",10.22,45.54,"ville",""],["Vérone",10.99,45.44,"ville",""],["Padoue",11.88,45.41,"ville",""],
+ ["Mantoue",10.79,45.16,"ville",""],["Crémone",10.02,45.13,"ville",""],["Parme",10.33,44.8,"ville",""],["Ferrare",11.62,44.84,"ville",""],["Ravenne",12.2,44.42,"ville","Dante y mourra en 1321."],
+ ["Lucques",10.5,43.84,"ville",""],["Sienne",11.33,43.32,"ville",""],["Arezzo",11.88,43.46,"ville",""],["Pérouse",12.39,43.11,"ville",""],["Ancône",13.51,43.62,"ville",""],
+ ["Assise",12.61,43.07,"ville",""],["Orvieto",12.11,42.72,"ville",""],["Anagni",13.15,41.73,"ville",""],["L'Aquila",13.4,42.35,"ville",""],["Bari",16.87,41.12,"ville",""],
+ ["Salerne",14.75,40.68,"ville",""],["Tarente",17.25,40.47,"ville",""],["Reggio",15.65,38.1,"ville",""],["Messine",15.55,38.19,"ville",""],["Catane",15.08,37.5,"ville",""],
+ ["Cagliari",9.11,39.22,"ville",""],["Udine",13.23,46.06,"ville",""],["Trente",11.12,46.07,"ville",""],["Raguse",18.1,42.65,"ville",""]
+],
+events:[
+ {d:"30 mars 1282",t:"Vêpres siciliennes",x:"Palerme se soulève contre Charles d'Anjou ; la Sicile passe aux Aragonais.",at:[13.36,38.12]},
+ {d:"27 janv. 1302",t:"Exil de Dante",x:"Les Guelfes noirs, maîtres de Florence, condamnent le poète, Guelfe blanc, à l'exil.",at:[11.25,43.77]},
+ {d:"31 août 1302",t:"Paix de Caltabellotta",x:"Frédéric d'Aragon garde l'île comme « roi de Trinacrie » ; les Angevins conservent la péninsule.",at:[13.22,37.57]},
+ {d:"7 sept. 1303",t:"Attentat d'Anagni",x:"Nogaret et Sciarra Colonna humilient le pape Boniface VIII, qui meurt un mois plus tard.",at:[13.15,41.73]},
+ {d:"1308‑1309",t:"Guerre de Ferrare",x:"Venise perd Ferrare face au pape, qui l'excommunie.",at:[11.62,44.84]},
+ {d:"1309",t:"Robert d'Anjou, roi",x:"Robert le Sage succède à son père Charles II et devient le chef du parti guelfe.",at:[14.25,40.85]},
+ {d:"15 juin 1310",t:"Conjuration de Tiepolo",x:"Venise écrase le complot contre le doge et crée le Conseil des Dix.",at:[12.33,45.44]},
+ {d:"oct. 1310",t:"Henri VII passe les Alpes",x:"Par le mont Cenis, l'empereur élu entre en Piémont et gagne Turin puis Asti.",at:[7.05,45.15]},
+ {d:"6 janv. 1311",t:"Couronne de fer",x:"Henri VII est couronné roi d'Italie à Milan.",at:[9.19,45.46]},
+ {d:"mai‑sept. 1311",t:"Siège de Brescia",x:"La ville guelfe résiste quatre mois ; le frère de l'empereur y est tué.",at:[10.22,45.54]},
+ {d:"29 juin 1312",t:"Couronnement impérial",x:"Henri VII est couronné empereur au Latran.",at:[12.5,41.89]},
+ {d:"24 août 1313",t:"Mort à Buonconvento",x:"L'empereur meurt de la malaria en marchant contre Naples. Il est enterré à Pise.",at:[11.48,43.13]}
+],
+chronTitle:"L'Italie des Guelfes et des Gibelins, 1282‑1313",
+footer:"Carte de synthèse. Les étiquettes « guelfe » et « gibelin » décrivent le parti au pouvoir en 1310 ; beaucoup de villes changeaient de camp au gré des exils. Les limites sont tracées automatiquement entre les chefs-lieux et restent approximatives.",
+overview:`<p class="panel-eyebrow">Année 1310</p><h2>Guelfes contre Gibelins</h2>
+<p>Le pape est parti pour Avignon, l'empereur n'est pas venu depuis soixante ans : l'Italie du Nord vit au rythme de ses communes et de leurs factions. Au sud, les Angevins de Naples et les Aragonais de Sicile se disputent l'héritage des Hohenstaufen.</p>
+<div class="stats"><div><b>{N}</b><span>puissances figurées</span></div><div><b>2</b><span>rois de « Sicile »</span></div><div><b>{V}</b><span>villes</span></div></div>
+<p>Henri VII arrive pour réconcilier les partis ; il finira chef des Gibelins, en guerre contre Florence et Robert de Naples.</p>
+<p style="color:var(--muted)">Cliquez sur un territoire ou cherchez-le dans l'index.</p>`,
+seas:[["Mer Tyrrhénienne",11.7,39.8,15],["Mer Adriatique",15.3,43.0,14],["Mer Ionienne",17.8,38.3,13],["Mer Ligure",8.8,43.6,12]],
+land:[
+ [[6.4,47.3],[19.1,47.3],[19.1,42.0],[18.55,42.4],[18.1,42.65],[17.5,43.0],[16.4,43.5],[15.9,43.7],[15.2,44.2],[14.9,44.6],[14.4,45.33],[14.2,45.1],[13.9,44.85],[13.6,45.1],[13.75,45.65],[13.5,45.75],[13.1,45.65],[12.6,45.5],[12.3,45.4],[12.25,45.2],[12.4,44.9],[12.3,44.6],[12.57,44.06],[13.0,43.85],[13.5,43.6],[13.9,42.95],[14.2,42.45],[14.7,42.1],[15.15,41.92],[16.0,41.95],[16.2,41.9],[15.95,41.6],[16.3,41.3],[16.87,41.12],[17.5,40.8],[17.95,40.65],[18.5,40.15],[18.37,39.8],[18.0,40.05],[17.25,40.45],[16.6,40.1],[16.6,39.7],[17.13,39.08],[16.55,38.75],[16.25,38.25],[15.65,37.95],[15.65,38.25],[15.85,38.65],[16.2,38.95],[16.05,39.35],[15.75,39.9],[15.4,40.05],[14.99,40.35],[14.75,40.68],[14.33,40.6],[14.45,40.75],[14.25,40.83],[14.05,40.8],[13.9,41.2],[13.57,41.2],[13.05,41.25],[12.62,41.45],[12.25,41.75],[11.8,42.1],[11.2,42.4],[11.0,42.75],[10.5,42.95],[10.5,43.3],[10.3,43.55],[10.25,43.9],[10.0,44.05],[9.83,44.1],[9.2,44.3],[8.93,44.41],[8.45,44.3],[8.2,43.98],[7.8,43.8],[7.27,43.69],[7.0,43.55],[6.65,43.25],[6.4,43.15]],
+ [[12.43,37.8],[12.5,38.02],[12.75,38.15],[13.1,38.2],[13.36,38.12],[13.75,38.0],[14.3,38.02],[15.0,38.15],[15.65,38.27],[15.28,37.85],[15.1,37.5],[15.25,37.1],[15.1,36.68],[14.45,36.75],[14.25,37.06],[13.55,37.27],[13.08,37.5],[12.6,37.6]],
+ [[8.22,40.93],[8.4,40.84],[8.71,40.91],[9.2,41.25],[9.6,41.0],[9.75,40.5],[9.7,40.0],[9.6,39.5],[9.52,39.14],[9.1,39.2],[8.85,38.9],[8.6,38.9],[8.4,39.1],[8.45,39.6],[8.55,39.9],[8.5,40.3],[8.3,40.56],[8.15,40.75]],
+ [[9.35,43.0],[9.45,42.7],[9.55,42.1],[9.4,41.6],[9.2,41.37],[8.8,41.6],[8.6,41.9],[8.6,42.3],[8.75,42.6],[9.1,42.7]],
+ [[10.1,42.82],[10.45,42.85],[10.4,42.72],[10.15,42.73]],
+ [[7.9,36.4],[8.6,36.9],[9.2,37.25],[9.87,37.3],[10.25,37.0],[10.55,36.85],[11.05,37.08],[11.1,36.4]]
+],
+waters:[
+ [[10.65,45.9],[10.75,45.75],[10.7,45.45],[10.55,45.48],[10.6,45.75]],
+ [[8.55,46.15],[8.7,45.95],[8.6,45.75],[8.53,45.8],[8.6,45.95]],
+ [[12.0,43.2],[12.15,43.2],[12.15,43.1],[12.0,43.1]]
+],
+rivers:[
+ [[7.3,45.0],[7.68,45.07],[8.45,45.13],[9.16,45.19],[9.69,45.05],[10.02,45.13],[10.79,45.16],[11.5,45.0],[12.4,44.95]],
+ [[10.9,43.95],[11.25,43.77],[10.8,43.68],[10.4,43.68],[10.3,43.68]],
+ [[11.9,43.8],[12.1,43.3],[12.4,42.85],[12.5,42.4],[12.48,41.9],[12.25,41.75]],
+ [[11.1,46.5],[11.12,46.07],[11.0,45.6],[10.99,45.44],[11.6,45.2],[12.3,45.2]]
+]
+};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="atlas.js"></script>
+</body></html>

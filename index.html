@@ -1,0 +1,144 @@
+<meta charset="utf-8">
+<title>Atlas médiéval</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English+SC&display=swap">
+<style>
+/* Page d'accueil : en-tête, quatre cartes en grille, mode d'emploi commun. */
+:root{
+  --bg:#e7e4dc; --surface:#f2f0ea; --ink:#1f1c22; --muted:#5f5962; --rule:#c6c0b3; --gold:#94680f;
+  --f-display:"Grenze Gotisch","UnifrakturCook",Georgia,serif;
+  --f-body:"EB Garamond",Garamond,"Times New Roman",serif;
+  --f-label:"IM Fell English SC","EB Garamond",Georgia,serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#141519;--surface:#1c1e24;--ink:#ebe5d6;--muted:#a49d92;--rule:#383842;--gold:#dbb052;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141519;--surface:#1c1e24;--ink:#ebe5d6;--muted:#a49d92;--rule:#383842;--gold:#dbb052;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:18px;line-height:1.55;margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 56px}
+.wrap{max-width:1180px;margin:0 auto}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+header{padding-block:56px 36px;border-bottom:1px solid var(--rule)}
+.eyebrow{font-family:var(--f-label);letter-spacing:.08em;color:var(--gold);font-size:16px}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(52px,9vw,104px);line-height:.9;margin:6px 0 16px}
+.lede{max-width:64ch;margin:0;color:var(--muted);font-size:19px}
+
+.maps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding-block:40px}
+@media (max-width:820px){.maps{grid-template-columns:minmax(0,1fr)}}
+.map{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--rule);color:inherit;text-decoration:none;min-width:0;transition:border-color .2s}
+.map:hover{border-color:var(--ink)}
+.band{display:flex;height:14px}
+.band span{flex:1}
+.map .body{padding:24px 26px 26px;display:flex;flex-direction:column;gap:12px;flex:1}
+.date{font-family:var(--f-label);color:var(--gold);font-size:17px;letter-spacing:.05em}
+.map h2{font-family:var(--f-display);font-weight:500;font-size:42px;line-height:1;margin:0;text-wrap:balance}
+.map p{margin:0}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;border-top:1px solid var(--rule);padding-top:12px;margin-top:4px}
+.facts b{display:block;font-family:var(--f-label);font-weight:400;font-size:26px;line-height:1.1;font-variant-numeric:tabular-nums}
+.facts span{font-size:14.5px;color:var(--muted)}
+.legend{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 16px;font-size:15.5px}
+@media (max-width:420px){.legend{grid-template-columns:minmax(0,1fr)}}
+.legend li{display:flex;gap:8px;align-items:center}
+.sw{width:14px;height:14px;border:1px solid rgba(0,0,0,.45);flex:none}
+.go{margin-top:auto;font-family:var(--f-label);font-size:18px;color:var(--gold)}
+h3{font-family:var(--f-label);font-weight:400;font-size:22px;margin:0 0 6px}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;border-top:1px solid var(--rule);padding-top:30px}
+@media (max-width:820px){.how{grid-template-columns:minmax(0,1fr)}}
+.how p{margin:0;color:var(--muted);font-size:17px}
+footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:15px;max-width:90ch}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Cartes interactives · l'Europe en 1310</div>
+  <h1>Atlas médiéval</h1>
+  <p class="lede">Quatre cartes d'une même année. En 1310, Philippe le Bel juge les Templiers, Henri VII part se faire couronner à Rome, l'Italie se déchire entre Guelfes et Gibelins, et la Pologne attend encore un roi. Survolez, cliquez, zoomez : chaque terre a sa notice.</p>
+</header>
+
+<section class="maps" aria-label="Les cartes">
+  <a class="map" href="france-1310.html">
+    <div class="band" aria-hidden="true"><span style="background:#2d4f9e"></span><span style="background:#8fa6e0"></span><span style="background:#56a9c4"></span><span style="background:#d8aa48"></span><span style="background:#b3392f"></span><span style="background:#6a9160"></span></div>
+    <div class="body">
+      <div class="date">Philippe le Bel</div>
+      <h2>Le royaume de France</h2>
+      <p>Le domaine royal s'étend, les frères du roi tiennent de vastes apanages, et le roi d'Angleterre garde la Guyenne en vassal.</p>
+      <ul class="legend">
+        <li><span class="sw" style="background:#2d4f9e"></span>Domaine royal</li>
+        <li><span class="sw" style="background:#8fa6e0"></span>Famille royale</li>
+        <li><span class="sw" style="background:#56a9c4"></span>Princes du sang</li>
+        <li><span class="sw" style="background:#d8aa48"></span>Grands fiefs</li>
+        <li><span class="sw" style="background:#b3392f"></span>Possessions anglaises</li>
+        <li><span class="sw" style="background:#6a9160"></span>Saint-Empire</li>
+      </ul>
+      <div class="facts"><div><b>60</b><span>terres</span></div><div><b>3</b><span>terres anglaises</span></div><div><b>12</b><span>événements</span></div></div>
+      <span class="go">Ouvrir la carte →</span>
+    </div>
+  </a>
+
+  <a class="map" href="empire-1310.html">
+    <div class="band" aria-hidden="true"><span style="background:#c8373a"></span><span style="background:#e0832a"></span><span style="background:#3b7fc4"></span><span style="background:#2c9c8c"></span><span style="background:#7f9d2c"></span><span style="background:#e7bf3d"></span></div>
+    <div class="body">
+      <div class="date">Henri VII de Luxembourg</div>
+      <h2>Le Saint-Empire</h2>
+      <p>Les seuls états immédiats : électeurs, princes, comtes, prélats, terres d'Empire, villes et abbayes impériales. Coloriés par famille ou par statut.</p>
+      <ul class="legend">
+        <li><span class="sw" style="background:#c8373a"></span>Luxembourg</li>
+        <li><span class="sw" style="background:#e0832a"></span>Habsbourg</li>
+        <li><span class="sw" style="background:#3b7fc4"></span>Wittelsbach</li>
+        <li><span class="sw" style="background:#2c9c8c"></span>Wettin</li>
+        <li><span class="sw" style="background:#7f9d2c"></span>Ascanie</li>
+        <li><span class="sw" style="background:#cfc3ab"></span>…et 19 autres groupes</li>
+      </ul>
+      <div class="facts"><div><b>206</b><span>états</span></div><div><b>61</b><span>villes impériales</span></div><div><b>7</b><span>électeurs</span></div></div>
+      <span class="go">Ouvrir la carte →</span>
+    </div>
+  </a>
+
+  <a class="map" href="italie-1310.html">
+    <div class="band" aria-hidden="true"><span style="background:#c4473a"></span><span style="background:#6e6b76"></span><span style="background:#2d4f9e"></span><span style="background:#e0973a"></span><span style="background:#e8d68a"></span><span style="background:#2b8e86"></span></div>
+    <div class="body">
+      <div class="date">Guelfes et Gibelins</div>
+      <h2>L'Italie</h2>
+      <p>Communes et seigneuries du Nord classées par camp, États de l'Église, Angevins de Naples, Sicile aragonaise et Venise.</p>
+      <ul class="legend">
+        <li><span class="sw" style="background:#c4473a"></span>Guelfes</li>
+        <li><span class="sw" style="background:#6e6b76"></span>Gibelins</li>
+        <li><span class="sw" style="background:#2d4f9e"></span>Angevins de Naples</li>
+        <li><span class="sw" style="background:#e0973a"></span>Trinacrie (Sicile)</li>
+        <li><span class="sw" style="background:#e8d68a"></span>États de l'Église</li>
+        <li><span class="sw" style="background:#2b8e86"></span>Venise</li>
+      </ul>
+      <div class="facts"><div><b>70</b><span>puissances</span></div><div><b>39</b><span>villes</span></div><div><b>12</b><span>événements</span></div></div>
+      <span class="go">Ouvrir la carte →</span>
+    </div>
+  </a>
+
+  <a class="map" href="pologne-1310.html">
+    <div class="band" aria-hidden="true"><span style="background:#c8373a"></span><span style="background:#ea9582"></span><span style="background:#e2a83c"></span><span style="background:#7d7a86"></span><span style="background:#4f8a4b"></span><span style="background:#3f7fbf"></span></div>
+    <div class="body">
+      <div class="date">Ladislas le Bref et Vytenis</div>
+      <h2>Pologne, Silésie et Lituanie</h2>
+      <p>Les duchés piastes sans roi, les huit duchés de Silésie, les ordres Teutonique et livonien, et la Lituanie païenne.</p>
+      <ul class="legend">
+        <li><span class="sw" style="background:#c8373a"></span>Ladislas le Bref</li>
+        <li><span class="sw" style="background:#ea9582"></span>Autres Piasts polonais</li>
+        <li><span class="sw" style="background:#e2a83c"></span>Piasts de Silésie</li>
+        <li><span class="sw" style="background:#7d7a86"></span>Ordres militaires</li>
+        <li><span class="sw" style="background:#4f8a4b"></span>Lituanie</li>
+        <li><span class="sw" style="background:#3f7fbf"></span>Ruthénie</li>
+      </ul>
+      <div class="facts"><div><b>35</b><span>territoires</span></div><div><b>8</b><span>duchés silésiens</span></div><div><b>44</b><span>villes</span></div></div>
+      <span class="go">Ouvrir la carte →</span>
+    </div>
+  </a>
+</section>
+
+<section class="how" aria-label="Mode d'emploi">
+  <div><h3>Explorer</h3><p>Molette ou pincement pour zoomer, glisser pour se déplacer. Les plus petits états et leurs noms apparaissent à mesure que l'on s'approche.</p></div>
+  <div><h3>Lire une terre</h3><p>Un clic ouvre la notice : qui la tient, de qui elle relève, ce qui s'y joue. L'index de chaque carte retrouve n'importe quel territoire ou ville par son nom.</p></div>
+  <div><h3>Filtrer</h3><p>Cliquez sur une couleur de la légende pour isoler une catégorie. La chronologie situe chaque événement sur la carte.</p></div>
+</section>
+
+<footer>Cartes de synthèse. Les frontières sont tracées automatiquement entre les chefs-lieux et restent approximatives ; les seigneuries médiévales étaient faites d'enclaves, de droits partagés et de suzerainetés contestées.</footer>
+</div>

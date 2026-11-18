@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pologne et Lituanie 1310</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English+SC&display=swap">
+<link rel="stylesheet" href="atlas.css">
+</head><body>
+<script>
+window.ATLAS={
+eyebrow:"Atlas de l'Europe médiévale",
+title:"Pologne, Silésie et Lituanie en 1310",
+lede:"Il n'y a plus de royaume de Pologne : depuis la mort de Venceslas III (1306), les duchés piastes sont partagés entre cousins. Ladislas le Bref tient Cracovie et rêve de couronne, mais il vient de perdre la Poméranie de Gdańsk au profit des chevaliers Teutoniques. À l'est, la Lituanie païenne de Vytenis grandit. La Silésie, elle, est morcelée en une dizaine de duchés.",
+frame:{lon0:13.5,lat1:57.8,lonSpan:14.5,latSpan:9.5,midLat:53,K:88},
+borderLabel:"Limite des duchés polonais (hors Silésie)",borderToggle:"Duchés polonais",
+kLabels:["Pologne","Terres des Piasts de Pologne","Hors des duchés polonais"],
+cats:{
+ lokietek:{label:"Duchés de Ladislas le Bref",sub:"Cracovie, Sandomierz, Sieradz, Łęczyca, Brześć",color:"#c8373a"},
+ piast:{label:"Autres duchés piastes de Pologne",sub:"Grande-Pologne, Couïavie, Mazovie, Dobrzyń",color:"#ea9582"},
+ silesie:{label:"Duchés piastes de Silésie",sub:"Une dizaine de princes cousins",color:"#e2a83c"},
+ eglise:{label:"Principautés ecclésiastiques",sub:"Évêques de Wrocław, de Warmie, de Livonie",color:"#9a6bb0"},
+ ordre:{label:"Ordres militaires",sub:"Ordre teutonique en Prusse, ordre livonien",color:"#7d7a86"},
+ lituanie:{label:"Grand-duché de Lituanie",sub:"Vytenis et son frère Gediminas",color:"#4f8a4b"},
+ ruthenie:{label:"Ruthénie",sub:"Galicie-Volhynie et principautés russes",color:"#3f7fbf"},
+ empire:{label:"Saint-Empire",sub:"Bohême, Brandebourg, Poméranie",color:"#b9a77c"},
+ out:{label:"Autres États",sub:"",color:"#cfcabd",out:true}
+},
+catOrder:["lokietek","piast","silesie","eglise","ordre","lituanie","ruthenie","empire","out"],
+regions:[
+ /* Ladislas le Bref */
+ {id:"petite-pologne",s:"Petite‑Pologne",n:"Duchés de Cracovie et de Sandomierz",c:"lokietek",k:1,h:"Ladislas Ier le Bref (Łokietek)",cap:"Cracovie",
+  t:"Le duché du princeps, siège traditionnel de la primauté. Ladislas y est entré en 1306 après la mort de Venceslas III. Les bourgeois allemands de Cracovie se révolteront contre lui en 1311.",
+  p:[[19.94,50.06],[20.5,50.3],[20.99,50.01],[21.75,50.68],[20.63,50.87],[22.57,51.25],[21.15,51.4],[19.56,50.28],[20.69,49.62],[22.2,50.9],[21.6,50.2],[22.5,50.5],[19.9,49.6],[21.8,51.5]]},
+ {id:"sieradz",s:"Sieradz‑Łęczyca",n:"Duchés de Sieradz et de Łęczyca",c:"lokietek",k:1,h:"Ladislas le Bref",cap:"Sieradz, Łęczyca",t:"Le patrimoine propre de Ladislas, issu de la branche couïave des Piasts.",p:[[18.73,51.6],[19.2,52.06],[19.5,51.75],[18.5,51.2],[19.7,51.4]]},
+ {id:"brzesc",s:"Brześć",n:"Duché de Brześć Kujawski",c:"lokietek",k:1,h:"Ladislas le Bref",cap:"Brześć Kujawski",t:"",p:[[18.9,52.6]]},
+ /* autres Piasts */
+ {id:"grande-pologne",s:"Grande‑Pologne",n:"Grande-Pologne",c:"piast",k:1,h:"Les fils d'Henri III de Głogów",cap:"Poznań, Gniezno",
+  t:"Berceau de la dynastie et de l'archevêché de Gniezno. Henri III de Głogów s'en était emparé en 1306 ; à sa mort (décembre 1309), ses fils la gardent. Ladislas la conquerra en 1314.",
+  p:[[16.93,52.41],[17.6,52.55],[16.5,52.0],[17.2,52.8],[18.25,52.22],[17.8,51.65],[16.4,52.7],[16.85,51.85],[17.6,53.14]]},
+ {id:"inowroclaw",s:"Inowrocław",n:"Duchés d'Inowrocław et de Gniewkowo",c:"piast",k:1,h:"Les fils de Siemomysł, neveux de Ladislas",cap:"Inowrocław",t:"",p:[[18.26,52.8],[18.0,53.12]]},
+ {id:"dobrzyn",s:"Dobrzyń",n:"Duché de Dobrzyń",c:"piast",k:1,h:"Siemowit de Dobrzyń, frère de Ladislas",cap:"Dobrzyń",t:"",p:[[19.2,52.95],[19.5,53.05]]},
+ {id:"mazovie",s:"Mazovie",n:"Duché de Mazovie",c:"piast",k:1,h:"Boleslas II de Mazovie († 1313)",cap:"Płock, Czersk",
+  t:"Duché du nord-est, exposé aux raids lituaniens. Boleslas a épousé une princesse lituanienne.",
+  p:[[19.7,52.55],[21.24,51.96],[20.24,52.23],[20.6,52.9],[21.57,53.08],[22.4,53.2],[21.97,52.4],[20.38,52.62],[20.85,51.9],[21.0,52.25]]},
+ /* Silésie */
+ {id:"wroclaw",s:"Wrocław‑Legnica",n:"Duché de Wrocław et Legnica",c:"silesie",k:0,h:"Boleslas III le Prodigue et ses frères, fils d'Henri V",cap:"Wrocław",
+  t:"Le plus riche des duchés silésiens ; les frères le partageront en 1311.",p:[[17.03,51.11],[17.47,50.86],[16.16,51.2],[16.5,51.15],[16.8,51.3]]},
+ {id:"glogow",s:"Głogów",n:"Duché de Głogów",c:"silesie",k:0,h:"Les fils d'Henri III de Głogów",cap:"Głogów",t:"Avec Żagań, Ścinawa et Oleśnica.",p:[[16.08,51.66],[15.32,51.62],[16.43,51.41],[17.39,51.2],[15.5,51.94],[16.32,51.8]]},
+ {id:"swidnica",s:"Świdnica‑Jawor",n:"Duchés de Świdnica et de Jawor",c:"silesie",k:0,h:"Bernard de Świdnica et Henri de Jawor",cap:"Świdnica, Jawor",t:"",p:[[16.49,50.84],[16.19,51.05],[15.73,50.9],[16.25,50.75]]},
+ {id:"ziebice",s:"Ziębice",n:"Duché de Ziębice",c:"silesie",k:0,h:"Bolko II de Ziębice",cap:"Ziębice",t:"",p:[[17.04,50.6]]},
+ {id:"nysa",s:"Nysa",n:"Principauté épiscopale de Nysa",c:"eglise",k:0,h:"Henri de Wierzbna, évêque de Wrocław",cap:"Nysa",t:"",p:[[17.33,50.47],[17.17,50.47]]},
+ {id:"opole",s:"Opole",n:"Duché d'Opole",c:"silesie",k:0,h:"Bolko Ier d'Opole († 1313)",cap:"Opole",t:"",p:[[17.93,50.67],[18.21,50.97],[17.62,50.64],[18.3,50.55]]},
+ {id:"raciborz",s:"Racibórz",n:"Duché de Racibórz",c:"silesie",k:0,h:"Leszek de Racibórz",cap:"Racibórz",t:"",p:[[18.22,50.09],[18.54,50.1]]},
+ {id:"bytom",s:"Bytom",n:"Duché de Bytom et Koźle",c:"silesie",k:0,h:"Casimir de Bytom",cap:"Bytom",t:"",p:[[18.92,50.35],[18.2,50.33],[19.23,50.47]]},
+ {id:"cieszyn",s:"Cieszyn",n:"Duché de Cieszyn et Oświęcim",c:"silesie",k:0,h:"Mieszko Ier de Cieszyn",cap:"Cieszyn",t:"Oświęcim en sera détaché en 1315.",p:[[18.63,49.75],[19.23,50.03],[19.05,49.82]]},
+ /* Ordres et Église en Prusse et Livonie */
+ {id:"prusse",s:"Prusse",n:"Prusse teutonique",c:"ordre",k:0,h:"Siegfried de Feuchtwangen, grand maître",cap:"Marienbourg",lp:[20.3,54.0],
+  t:"Conquise sur les Prussiens païens depuis 1230. En 1309, le grand maître quitte Venise pour Marienbourg, qui devient la capitale de l'ordre. Les évêques de Chełmno, de Pomésanie et de Sambie y ont leurs terres.",
+  p:[[19.03,54.04],[20.51,54.71],[19.4,54.15],[21.5,54.1],[21.6,54.6],[22.2,54.5],[19.96,53.7],[20.9,53.6],[21.8,53.65],[18.75,53.48],[18.6,53.01],[19.4,53.26],[19.3,53.7],[21.15,55.7]]},
+ {id:"wildnis",s:"Wildnis",n:"La Grande Wildnis (Sudovie)",c:"ordre",k:0,h:"Zone dévastée entre l'ordre et la Lituanie",cap:"",t:"L'ancienne Sudovie, conquise et dépeuplée par l'ordre à la fin du XIIIᵉ siècle : une forêt-frontière parcourue par les raids.",p:[[22.4,54.2],[22.6,53.7]]},
+ {id:"pomerelie",s:"Pomérélie",n:"Pomérélie (Poméranie de Gdańsk)",c:"ordre",k:0,h:"L'ordre teutonique, depuis 1308",cap:"Gdańsk",
+  t:"Appelés par Ladislas contre les Brandebourgeois, les chevaliers prennent Gdańsk en novembre 1308 et gardent le pays. Le traité de Soldin (1309) leur fait acheter les droits du Brandebourg. La Pologne ne la récupérera qu'en 1466.",
+  p:[[18.65,54.35],[18.25,54.3],[18.78,54.09],[17.56,53.7],[18.45,53.4],[18.1,53.95]]},
+ {id:"warmie",s:"Warmie",n:"Évêché de Warmie",c:"eglise",k:0,h:"Eberhard de Neisse, évêque",cap:"Braniewo",t:"",p:[[20.58,54.13],[19.68,54.36],[20.5,53.78]]},
+ {id:"livonie",s:"Ordre livonien",n:"Terres de l'ordre livonien",c:"ordre",k:0,h:"Gerhard de Jork, maître",cap:"Wenden",lp:[24.2,56.6],
+  t:"Branche livonienne des Teutoniques, en guerre ouverte contre la ville de Riga, alliée des Lituaniens païens.",p:[[25.27,57.31],[21.97,56.97],[21.0,56.5],[23.72,56.65],[26.6,57.6],[24.0,56.3],[22.8,56.65],[26.5,56.6]]},
+ {id:"riga",s:"Riga",n:"Archevêché de Riga",c:"eglise",k:0,h:"Frédéric de Pernstein, archevêque",cap:"Riga",t:"L'archevêque, réfugié à Avignon, accuse l'ordre devant le pape.",p:[[25.43,56.64],[24.85,57.18],[26.0,56.95],[24.4,56.9]]},
+ {id:"courlande",s:"Courlande",n:"Évêché de Courlande",c:"eglise",k:0,h:"L'évêque de Courlande",cap:"Piltene",t:"",p:[[21.67,57.22],[21.6,56.72]]},
+ /* Lituanie */
+ {id:"lituanie",s:"Lituanie",n:"Grand-duché de Lituanie",c:"lituanie",k:0,h:"Vytenis, grand-duc (vers 1295‑1316)",cap:"Kernavė, Trakai",
+  t:"Le dernier État païen d'Europe. Vytenis mène des raids en Prusse et en Mazovie et soutient Riga contre l'ordre ; son frère Gediminas lui succédera vers 1316 et fondera Vilnius.",
+  p:[[25.28,54.69],[24.85,54.89],[23.9,54.9],[24.75,55.25],[25.6,55.5],[27.05,55.6],[25.95,54.42],[23.35,54.55],[23.97,54.02],[26.85,54.32],[26.2,55.1],[27.5,54.9]]},
+ {id:"samogitie",s:"Samogitie",n:"Samogitie",c:"lituanie",k:0,h:"Nobles samogitiens, alliés du grand-duc",cap:"",t:"Pays païen que l'ordre teutonique veut conquérir pour relier la Prusse à la Livonie.",p:[[22.25,55.98],[23.1,55.38],[22.5,55.3],[23.32,55.93],[21.53,56.27],[21.8,55.6]]},
+ {id:"ruthenie-noire",s:"Ruthénie noire",n:"Ruthénie noire (Novogroudok, Grodno)",c:"lituanie",k:0,h:"Les princes lituaniens",cap:"Novogroudok",t:"Premières terres slaves orthodoxes passées sous la domination lituanienne.",p:[[25.83,53.6],[23.83,53.68],[25.3,53.9],[25.32,53.09],[24.47,53.16]]},
+ {id:"polotsk",s:"Polotsk",n:"Principauté de Polotsk",c:"lituanie",k:0,h:"Sous influence lituanienne depuis 1307",cap:"Polotsk",t:"",p:[[27.8,55.7],[27.6,55.25]]},
+ /* Ruthénie */
+ {id:"galicie",s:"Galicie‑Volhynie",n:"Royaume de Galicie-Volhynie",c:"ruthenie",k:0,h:"André et Léon II, fils de Iouri Ier († 1308)",cap:"Volodymyr, Lviv",lp:[24.6,50.6],
+  t:"Héritier de Daniel de Galicie, couronné roi en 1253. Il tient Lublin à distance et domine Brest et Drohiczyn. Son extinction (1323) ouvrira une longue lutte entre Pologne et Lituanie.",
+  p:[[24.33,50.85],[25.33,50.75],[24.03,49.84],[24.7,49.12],[22.8,49.78],[23.47,51.13],[23.65,52.1],[22.66,52.4],[26.25,50.62],[25.6,49.55],[22.2,49.56],[25.04,48.53],[27.0,50.6],[23.5,50.4],[24.4,51.6],[26.0,51.2]]},
+ {id:"pinsk",s:"Pinsk‑Tourov",n:"Principautés de Pinsk et de Tourov",c:"ruthenie",k:0,h:"Princes riourikides",cap:"Pinsk",t:"",p:[[26.1,52.1],[27.74,52.07],[25.5,52.4],[27.0,52.6]]},
+ {id:"minsk",s:"Minsk",n:"Principauté de Minsk",c:"ruthenie",k:0,h:"Princes riourikides",cap:"Minsk",t:"Elle passera aux Lituaniens sous Gediminas.",p:[[27.56,53.9],[27.5,53.35]]},
+ /* Empire */
+ {id:"boheme",s:"Bohême",n:"Royaume de Bohême et Moravie",c:"empire",k:0,h:"Jean de Luxembourg (investi en 1310), contre Henri de Carinthie",cap:"Prague",lp:[15.5,49.9],
+  t:"Les rois de Bohême revendiquent aussi la couronne de Pologne, portée par Venceslas II et Venceslas III. Kłodzko et Opava en dépendent.",
+  p:[[14.42,50.08],[15.83,50.2],[13.9,49.6],[15.05,50.77],[14.47,48.97],[15.3,49.75],[16.65,50.44],[16.61,49.2],[17.25,49.6],[17.9,49.95],[17.13,48.9],[16.0,49.4],[14.0,50.5]]},
+ {id:"autriche",s:"Autriche",n:"Duché d'Autriche",c:"empire",k:0,h:"Frédéric le Beau (Habsbourg)",cap:"Vienne",t:"",p:[[15.5,48.5],[16.4,48.4],[14.3,48.4]]},
+ {id:"brandebourg",s:"Brandebourg",n:"Margraviat de Brandebourg",c:"empire",k:0,h:"Waldemar le Grand",cap:"Brandebourg",lp:[14.4,52.6],
+  t:"Avec la Neumark, les Lusaces et, jusqu'en 1317, les terres de Słupsk et Sławno. Au traité de Soldin (1309), le margrave vend ses droits sur Gdańsk à l'ordre teutonique.",
+  p:[[13.6,52.5],[14.55,52.35],[15.24,52.73],[15.4,53.1],[15.85,53.0],[14.43,51.18],[14.99,51.15],[14.33,51.76],[13.9,53.3],[16.95,54.45],[16.5,54.3],[17.75,54.54],[16.47,53.27],[13.8,52.0]]},
+ {id:"pomeranie",s:"Poméranie",n:"Duchés de Poméranie",c:"empire",k:0,h:"Othon Ier de Stettin et Wartislav IV de Wolgast",cap:"Stettin",t:"",p:[[14.55,53.43],[13.8,53.85],[14.95,53.35],[15.25,53.7],[15.58,54.17],[16.0,54.0]]},
+ {id:"misnie",s:"Misnie",n:"Margraviat de Misnie",c:"empire",k:0,h:"Frédéric le Mordu",cap:"Meissen",t:"",p:[[13.7,51.1]]},
+ /* Hors */
+ {id:"hongrie",s:"Hongrie",n:"Royaume de Hongrie",c:"out",k:0,h:"Charles Robert d'Anjou (couronné en août 1310)",lp:[20.5,48.6],t:"",p:[[18.0,48.4],[19.0,48.7],[20.2,49.0],[21.2,48.7],[22.3,48.6],[23.7,48.3],[17.3,48.3]]},
+ {id:"horde",s:"Horde d'or",n:"Podolie et steppes de la Horde d'or",c:"out",k:0,h:"Khan Tokhta",lp:[27.6,49.0],t:"",p:[[27.8,48.5],[27.9,49.3],[26.8,48.8]]}
+],
+points:[
+ ["Cracovie",19.94,50.06,"ville","Capitale de Ladislas le Bref, où il sera sacré roi en 1320.",1],["Gniezno",17.6,52.53,"ville","Siège de l'archevêque primat ; lieu des couronnements de 1295 et 1300.",1],
+ ["Poznań",16.93,52.41,"ville",""],["Kalisz",18.09,51.76,"ville",""],["Sandomierz",21.75,50.68,"ville",""],["Lublin",22.57,51.25,"ville",""],["Płock",19.7,52.55,"ville","Capitale de la Mazovie."],
+ ["Łęczyca",19.2,52.06,"ville",""],["Sieradz",18.73,51.6,"ville",""],["Inowrocław",18.26,52.8,"ville",""],["Varsovie",21.01,52.25,"ville","Petite ville ducale de Mazovie."],
+ ["Wrocław",17.03,51.11,"ville","",1],["Legnica",16.16,51.21,"ville",""],["Głogów",16.08,51.66,"ville",""],["Opole",17.93,50.67,"ville",""],["Racibórz",18.22,50.09,"ville",""],
+ ["Świdnica",16.49,50.84,"ville",""],["Nysa",17.33,50.47,"ville",""],["Cieszyn",18.63,49.75,"ville",""],
+ ["Gdańsk",18.65,54.35,"ville","Prise par les Teutoniques en novembre 1308.",1],["Marienbourg",19.03,54.04,"ville","Capitale de l'ordre teutonique depuis 1309.",1],["Toruń",18.6,53.01,"ville",""],
+ ["Chełmno",18.47,53.35,"ville",""],["Elbląg",19.4,54.16,"ville",""],["Königsberg",20.51,54.71,"ville","",1],["Memel",21.13,55.7,"ville",""],["Riga",24.1,56.95,"ville","Ville hanséatique en guerre contre l'ordre livonien.",1],
+ ["Kernavė",24.85,54.89,"ville","Capitale lituanienne avant Vilnius.",1],["Trakai",24.93,54.64,"ville",""],["Kaunas",23.9,54.9,"ville",""],["Grodno",23.83,53.68,"ville",""],["Novogroudok",25.83,53.6,"ville",""],
+ ["Brest",23.65,52.1,"ville",""],["Volodymyr",24.33,50.85,"ville","",1],["Lviv",24.03,49.84,"ville",""],["Halytch",24.7,49.12,"ville",""],["Przemyśl",22.8,49.78,"ville",""],["Chełm",23.47,51.13,"ville",""],["Pinsk",26.1,52.1,"ville",""],["Minsk",27.56,53.9,"ville",""],
+ ["Prague",14.42,50.08,"ville","",1],["Olomouc",17.25,49.6,"ville",""],["Stettin",14.55,53.43,"ville",""],["Francfort-sur-l'Oder",14.55,52.35,"ville",""]
+],
+events:[
+ {d:"26 juin 1295",t:"Sacre de Przemysł II",x:"Premier roi de Pologne couronné depuis deux siècles, à Gniezno. Il est assassiné l'année suivante.",at:[17.6,52.53]},
+ {d:"1300",t:"Venceslas II, roi de Pologne",x:"Le roi de Bohême est couronné à Gniezno ; Ladislas le Bref part en exil.",at:[17.6,52.53]},
+ {d:"4 août 1306",t:"Assassinat de Venceslas III",x:"Le dernier Přemyslide est tué à Olomouc ; Ladislas reprend Cracovie.",at:[17.25,49.6]},
+ {d:"13 nov. 1308",t:"Prise de Gdańsk",x:"Appelés contre les Brandebourgeois, les chevaliers Teutoniques prennent la ville et massacrent ses défenseurs.",at:[18.65,54.35]},
+ {d:"13 sept. 1309",t:"Traité de Soldin",x:"Le Brandebourg vend ses droits sur la Pomérélie à l'ordre teutonique.",at:[14.86,52.92]},
+ {d:"sept. 1309",t:"Marienbourg capitale",x:"Le grand maître quitte Venise et s'installe sur la Nogat.",at:[19.03,54.04]},
+ {d:"9 déc. 1309",t:"Mort d'Henri III de Głogów",x:"Ses fils gardent la Grande-Pologne jusqu'en 1314.",at:[16.08,51.66]},
+ {d:"août 1310",t:"Jean de Luxembourg, roi de Bohême",x:"Le nouveau roi hérite aussi des prétentions de ses prédécesseurs sur la couronne polonaise.",at:[14.42,50.08]},
+ {d:"1311‑1312",t:"Révolte du wójt Albert",x:"Les bourgeois allemands de Cracovie se soulèvent contre Ladislas, qui les écrase.",at:[19.94,50.06]},
+ {d:"1314",t:"Ladislas prend la Grande-Pologne",x:"Il réunit les deux grands pays polonais.",at:[16.93,52.41]},
+ {d:"vers 1316",t:"Gediminas, grand-duc",x:"Le frère de Vytenis fera de la Lituanie une grande puissance et fondera Vilnius.",at:[24.85,54.89]},
+ {d:"20 janv. 1320",t:"Sacre de Ladislas le Bref",x:"Couronné à Cracovie, il restaure le royaume de Pologne.",at:[19.94,50.06]}
+],
+chronTitle:"De la couronne perdue à la couronne retrouvée, 1295‑1320",
+overview:`<p class="panel-eyebrow">Année 1310</p><h2>Un royaume sans roi</h2>
+<p>Depuis 1138, la Pologne est divisée entre les descendants de Boleslas Bouche-Torse. Trois rois ont porté la couronne entre 1295 et 1306, puis plus personne. En 1310, Ladislas le Bref tient le sud, les fils d'Henri de Głogów le nord-ouest, les Teutoniques la mer.</p>
+<div class="stats"><div><b>{N}</b><span>territoires figurés</span></div><div><b>8</b><span>duchés silésiens</span></div><div><b>{V}</b><span>villes</span></div></div>
+<p>À l'est, la Lituanie païenne s'étend vers les terres ruthènes, tandis que l'ordre livonien et l'ordre teutonique la pressent par le nord et l'ouest.</p>
+<p style="color:var(--muted)">Cliquez sur un territoire ou cherchez-le dans l'index.</p>`,
+seas:[["Mer Baltique",17.0,55.4,16],["Golfe de Riga",23.3,57.55,11]],
+land:[
+ [[13.4,54.15],[14.2,53.95],[15.0,54.05],[15.6,54.2],[16.2,54.4],[16.9,54.6],[17.5,54.75],[18.35,54.83],[18.55,54.6],[18.65,54.4],[18.95,54.35],[19.6,54.45],[19.9,54.65],[19.95,54.95],[20.5,54.95],[21.0,55.25],[21.1,55.7],[21.05,56.05],[21.0,56.5],[21.2,57.0],[21.55,57.4],[22.0,57.6],[22.6,57.75],[23.1,57.3],[23.5,57.0],[24.1,57.05],[24.4,57.25],[24.35,57.6],[24.35,57.9],[28.1,57.9],[28.1,48.2],[13.4,48.2]]
+],
+waters:[
+ [[19.25,54.3],[19.6,54.45],[20.0,54.65],[20.3,54.62],[19.9,54.45],[19.5,54.3]],
+ [[20.6,54.95],[21.1,55.7],[21.3,55.5],[21.25,55.25],[21.0,55.05]],
+ [[13.8,53.85],[14.4,53.85],[14.6,53.7],[14.3,53.7],[13.9,53.75]]
+],
+rivers:[
+ [[18.9,49.6],[19.94,50.06],[21.0,50.4],[21.75,50.68],[21.85,51.4],[21.0,52.23],[20.3,52.4],[19.7,52.55],[18.6,53.01],[18.75,53.48],[18.9,54.35]],
+ [[18.2,50.1],[17.93,50.67],[17.03,51.11],[16.08,51.66],[15.6,52.0],[14.55,52.35],[14.3,53.0],[14.55,53.43],[14.3,53.75]],
+ [[19.3,50.8],[18.73,51.6],[17.6,52.2],[16.93,52.41],[15.24,52.73],[14.65,52.59]],
+ [[25.5,53.6],[23.83,53.68],[24.0,54.3],[23.9,54.9],[22.0,55.08],[21.3,55.3]],
+ [[24.4,49.8],[24.33,50.85],[23.65,52.1],[22.5,52.4],[21.0,52.45]],
+ [[28.0,55.9],[26.53,55.87],[25.5,56.4],[24.1,57.0]],
+ [[24.4,51.7],[26.1,52.1],[28.0,51.6]],
+ [[23.0,49.4],[24.7,49.12],[26.5,48.6],[28.0,48.3]]
+]
+};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="atlas.js"></script>
+</body></html>

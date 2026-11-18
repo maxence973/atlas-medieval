@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Royaume de France 1310</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English+SC&display=swap">
+<link rel="stylesheet" href="atlas.css">
+</head><body>
+<script>
+window.ATLAS={
+eyebrow:"Atlas de l'Europe médiévale",
+title:"Le royaume de France en 1310",
+lede:"Sous Philippe le Bel, le roi de France est le plus puissant souverain d'Occident : il a humilié le pape, soumis la Flandre et fait arrêter les Templiers. Mais le roi d'Angleterre tient encore la Guyenne, et les grands fiefs gardent leurs princes. Survolez une terre pour savoir qui la tient, cliquez pour lire sa notice.",
+frame:{lon0:-5.5,lat1:51.5,lonSpan:15,latSpan:10.5,midLat:46.25,K:80},
+borderLabel:"Limite du royaume (Escaut, Meuse, Saône, Rhône)",borderToggle:"Limite du royaume",
+kLabels:["Royaume","Dans le royaume de France","Hors du royaume"],
+cats:{
+ domaine:{label:"Domaine royal",sub:"Terres tenues directement par le roi",color:"#2d4f9e",lys:true},
+ famille:{label:"Famille royale",sub:"Fils et frères du roi",color:"#8fa6e0"},
+ prince:{label:"Princes du sang",sub:"Branches capétiennes plus éloignées",color:"#56a9c4"},
+ fief:{label:"Grands fiefs",sub:"Vassaux qui gouvernent leurs terres",color:"#d8aa48"},
+ anglais:{label:"Possessions anglaises",sub:"Tenues par le roi d'Angleterre",color:"#b3392f"},
+ empire:{label:"Saint-Empire",sub:"Hors du royaume",color:"#6a9160"},
+ eglise:{label:"Terres pontificales",sub:"Comtat Venaissin",color:"#7d528e"},
+ etranger:{label:"Autres royaumes",sub:"",color:"#cfcabd",out:true}
+},
+catOrder:["domaine","famille","prince","fief","anglais","empire","eglise","etranger"],
+regions:[
+ {id:"idf",s:"Île-de-France",n:"Île-de-France et Sénonais",c:"domaine",k:1,h:"Philippe IV le Bel (1285‑1314)",cap:"Paris",t:"Cœur du domaine capétien. Le roi y gouverne avec ses légistes, Guillaume de Nogaret et Enguerrand de Marigny. Le 12 mai 1310, cinquante-quatre Templiers y sont brûlés.",
+  p:[[2.35,48.86],[2.08,49.05],[2.6,49.2],[3.0,48.95],[2.7,48.55],[2.15,48.65],[1.75,48.98],[3.28,48.2],[3.3,48.55]]},
+ {id:"valois",s:"Valois",n:"Terres de Charles de Valois",c:"famille",k:1,h:"Charles de Valois, frère du roi",cap:"Crépy, Angers, Le Mans, Alençon, Chartres",lp:[-0.1,47.85],
+  t:"Le frère du roi tient le Valois, l'Anjou et le Maine (dot de Marguerite d'Anjou-Naples, 1290), Alençon, le Perche et Chartres. Son fils deviendra roi en 1328 sous le nom de Philippe VI.",
+  p:[[2.89,49.23],[3.15,49.3],[-0.55,47.47],[-0.08,47.26],[-0.9,47.1],[0.2,47.55],[-0.87,47.69],[-0.3,47.75],[0.2,48.0],[-0.6,48.1],[0.6,48.02],[-0.2,48.25],[0.09,48.43],[0.6,48.5],[-0.35,48.55],[0.82,48.32],[1.49,48.45],[1.25,48.3]]},
+ {id:"evreux",s:"Évreux",n:"Comtés d'Évreux et d'Étampes",c:"famille",k:1,h:"Louis d'Évreux, demi-frère du roi",cap:"Évreux",
+  t:"Apanage constitué en 1307. Son fils Philippe deviendra roi de Navarre par son mariage avec Jeanne, fille de Louis X.",p:[[1.15,49.02],[0.95,48.92],[2.16,48.43]]},
+ {id:"champagne",s:"Champagne",n:"Comté de Champagne et de Brie",c:"famille",k:1,h:"Louis, fils aîné du roi, roi de Navarre (futur Louis X)",cap:"Troyes",
+  t:"Héritage de la reine Jeanne de Navarre († 1305), passé à son fils aîné. Il sera réuni définitivement à la Couronne en 1361. Reims y est la ville du sacre.",
+  p:[[4.03,49.25],[4.36,48.95],[4.07,48.3],[3.5,48.62],[4.85,48.6],[5.14,48.11],[5.33,47.86],[3.8,49.0],[4.9,49.15],[4.6,48.3],[4.5,47.95]]},
+ {id:"navarre",s:"Navarre",n:"Royaume de Navarre",c:"famille",k:0,h:"Louis, fils aîné du roi de France",cap:"Pampelune",
+  t:"Royaume pyrénéen hérité de Jeanne de Navarre. Il sera séparé de la France en 1328.",p:[[-1.64,42.82],[-1.6,42.1],[-1.24,43.16],[-2.0,42.6],[-1.15,42.5]]},
+ {id:"normandie",s:"Normandie",n:"Duché de Normandie",c:"domaine",k:1,h:"Le roi",cap:"Rouen",lp:[0.1,49.1],
+  t:"Réuni au domaine depuis la conquête de Philippe Auguste (1204). L'Échiquier de Rouen y rend la justice.",
+  p:[[1.1,49.44],[0.6,49.75],[1.4,49.85],[-0.37,49.18],[0.23,49.15],[0.6,49.05],[-0.75,48.85],[-1.1,49.12],[-1.45,49.05],[-1.25,49.5],[0.7,48.75],[-0.2,48.8],[1.55,49.3],[0.1,49.5],[-1.5,49.35],[-1.62,49.64],[-1.8,49.65]]},
+ {id:"picardie",s:"Picardie",n:"Picardie (Amiénois, Vermandois)",c:"domaine",k:1,h:"Le roi",cap:"Amiens",t:"Bailliages d'Amiens et de Vermandois.",
+  p:[[2.3,49.9],[3.29,49.85],[3.62,49.56],[2.9,49.45],[2.08,49.43],[1.6,49.7],[2.93,49.93],[2.45,50.2]]},
+ {id:"ponthieu",s:"Ponthieu",n:"Comté de Ponthieu et Montreuil",c:"anglais",k:1,h:"Édouard II, roi d'Angleterre",cap:"Abbeville",
+  t:"Hérité d'Éléonore de Castille, mère d'Édouard II, en 1279.",p:[[1.85,50.15],[1.76,50.46],[1.6,50.3]]},
+ {id:"boulogne",s:"Boulogne",n:"Comté de Boulogne",c:"fief",k:1,h:"Robert VI, comte d'Auvergne et de Boulogne",cap:"Boulogne",
+  t:"Édouard II y a épousé Isabelle de France, fille de Philippe le Bel, le 25 janvier 1308.",p:[[1.62,50.72],[1.75,50.6]]},
+ {id:"artois",s:"Artois",n:"Comté d'Artois",c:"prince",k:1,h:"Mahaut d'Artois",cap:"Arras",
+  t:"Arrière-petite-nièce de Saint Louis. Son neveu Robert III lui conteste l'héritage. Sa fille Jeanne a épousé Philippe de Poitiers, second fils du roi. Calais fait partie du comté.",
+  p:[[2.78,50.29],[2.25,50.73],[2.05,50.38],[1.86,50.95],[1.95,50.85]]},
+ {id:"saintpol",s:"Saint‑Pol",n:"Comté de Saint-Pol",c:"fief",k:1,h:"Guy III de Châtillon, grand bouteiller de France",cap:"Saint-Pol",t:"",p:[[2.33,50.38]]},
+ {id:"flandre",s:"Flandre",n:"Comté de Flandre",c:"fief",k:1,h:"Robert III de Béthune (1305‑1322)",cap:"Gand, Bruges, Ypres",
+  t:"Les milices flamandes ont écrasé la chevalerie française à Courtrai (1302), puis ont été battues à Mons-en-Pévèle (1304). Le traité d'Athis (1305) impose au comté une lourde amende. La partie à l'est de l'Escaut relève de l'Empire.",
+  p:[[3.22,51.21],[3.72,51.05],[2.88,50.85],[2.4,50.97],[3.27,50.83],[3.9,51.25],[3.4,51.0],[4.05,50.95]]},
+ {id:"lille",s:"Lille",n:"Lille, Douai et Béthune",c:"domaine",k:1,h:"Le roi, en gage",cap:"Lille",
+  t:"Occupées par le roi depuis la guerre de Flandre ; elles lui seront cédées en 1312 par le « transport de Flandre ».",p:[[3.06,50.63],[3.08,50.37],[2.64,50.53],[2.85,50.6]]},
+ {id:"hainaut",s:"Hainaut",n:"Comté de Hainaut",c:"empire",k:0,h:"Guillaume Ier d'Avesnes",cap:"Mons",t:"Uni à la Hollande et à la Zélande.",p:[[3.95,50.45],[3.52,50.36],[4.1,50.1],[3.75,50.62],[3.95,50.0]]},
+ {id:"brabant",s:"Brabant",n:"Duché de Brabant",c:"empire",k:0,h:"Jean II (1294‑1312)",cap:"Bruxelles",t:"",p:[[4.35,50.85],[4.7,50.88],[4.48,51.03],[4.4,51.22],[5.0,51.2],[4.45,50.6],[4.8,51.42]]},
+ {id:"liege",s:"Liège",n:"Principauté de Liège et comté de Namur",c:"empire",k:0,h:"Thibaut de Bar, prince-évêque ; Jean Ier, comte de Namur",cap:"Liège",t:"",p:[[5.57,50.63],[5.25,50.35],[4.9,50.1],[5.33,50.93],[5.1,49.85],[4.87,50.47],[5.9,50.45]]},
+ {id:"luxembourg",s:"Luxembourg",n:"Comté de Luxembourg",c:"empire",k:0,h:"Henri VII, roi des Romains",cap:"Luxembourg",t:"Le comté familial du roi des Romains élu en 1308.",p:[[6.13,49.61],[5.75,49.9],[6.05,50.25],[5.45,49.65]]},
+ {id:"lorraine",s:"Lorraine",n:"Duché de Lorraine et Trois-Évêchés",c:"empire",k:0,h:"Thiébaut II, duc de Lorraine ; évêques de Metz, Toul et Verdun",cap:"Nancy",t:"",p:[[6.18,48.69],[6.18,49.12],[5.38,49.16],[5.9,48.68],[6.45,48.17],[6.9,48.3],[6.9,48.95],[6.6,49.15],[5.75,48.3]]},
+ {id:"bar",s:"Bar",n:"Comté de Bar",c:"fief",k:1,h:"Édouard Ier de Bar",cap:"Bar-le-Duc",t:"Depuis le traité de Bruges (1301), le comte prête hommage au roi pour le « Barrois mouvant », à l'ouest de la Meuse ; le reste relève de l'Empire.",p:[[5.16,48.77],[5.5,48.85],[5.85,49.35],[5.4,48.5]]},
+ {id:"nevers",s:"Nevers",n:"Comtés de Nevers et de Rethel",c:"fief",k:1,h:"Louis Ier de Nevers, fils du comte de Flandre",cap:"Nevers",lp:[3.3,47.15],t:"",p:[[3.16,46.99],[3.5,47.4],[3.6,47.05],[3.13,47.35],[4.37,49.5],[4.72,49.77]]},
+ {id:"auxerre",s:"Auxerre",n:"Comtés d'Auxerre et de Tonnerre",c:"fief",k:1,h:"Maison de Chalon",cap:"Auxerre",t:"Le comté d'Auxerre ne sera acheté par la Couronne qu'en 1370.",p:[[3.57,47.8],[3.97,47.86]]},
+ {id:"bretagne",s:"Bretagne",n:"Duché de Bretagne",c:"fief",k:1,h:"Arthur II (1305‑1312)",cap:"Rennes, Nantes, Vannes",lp:[-2.75,48.05],
+  t:"Duché tenu par la maison de Dreux, branche cadette capétienne. Le duc est aussi vicomte de Limoges.",
+  p:[[-1.68,48.11],[-1.55,47.22],[-2.76,47.66],[-4.1,48.0],[-3.0,48.5],[-2.05,48.45],[-3.37,47.75],[-3.5,48.3],[-2.3,48.0],[-1.3,47.7],[-2.2,47.35],[-1.2,48.35],[-2.0,48.62],[-4.1,48.55],[-3.8,48.6],[-1.28,47.09],[-1.85,47.05],[-4.4,48.62],[-4.35,48.2],[-4.49,48.39],[-4.68,48.38]]},
+ {id:"touraine",s:"Touraine",n:"Touraine",c:"domaine",k:1,h:"Le roi",cap:"Tours",t:"",p:[[0.69,47.39],[1.0,47.13],[0.24,47.17],[0.98,47.45],[0.6,47.0]]},
+ {id:"blois",s:"Blois",n:"Comté de Blois et Dunois",c:"fief",k:1,h:"Guy Ier de Châtillon",cap:"Blois",t:"",p:[[1.33,47.59],[1.33,48.07],[1.74,47.36]]},
+ {id:"vendome",s:"Vendôme",n:"Comté de Vendôme",c:"fief",k:1,h:"Les comtes de Vendôme",cap:"Vendôme",t:"",p:[[1.07,47.79]]},
+ {id:"dreux",s:"Dreux",n:"Comté de Dreux",c:"prince",k:1,h:"Robert V de Dreux",cap:"Dreux",t:"Branche capétienne issue de Robert, frère de Louis VII.",p:[[1.37,48.74]]},
+ {id:"orleanais",s:"Orléanais",n:"Orléanais et Gâtinais",c:"domaine",k:1,h:"Le roi",cap:"Orléans",t:"",p:[[1.9,47.9],[2.3,47.7],[2.73,48.0],[1.75,48.15]]},
+ {id:"berry",s:"Berry",n:"Berry",c:"domaine",k:1,h:"Le roi",cap:"Bourges",t:"",p:[[2.4,47.08],[1.7,46.8],[2.5,46.72],[2.7,47.32],[1.95,47.2],[1.3,46.7],[2.0,46.45]]},
+ {id:"poitou",s:"Poitou",n:"Comté de Poitou",c:"domaine",k:1,h:"Le roi",cap:"Poitiers",t:"Philippe le Bel en fera l'apanage de son second fils, Philippe, en 1311. Clément V y a rencontré le roi en 1308 au sujet des Templiers.",
+  p:[[0.34,46.58],[-0.45,46.33],[-1.2,46.6],[-0.8,46.85],[0.6,46.2],[-0.2,46.9],[0.55,46.85],[-1.7,46.55],[0.05,46.3]]},
+ {id:"saintonge",s:"Saintonge",n:"Aunis et Saintonge",c:"domaine",k:1,h:"Le roi",cap:"La Rochelle, Saintes",t:"La Saintonge au sud de la Charente reste au roi d'Angleterre.",p:[[-1.15,46.16],[-0.63,45.75],[-0.52,45.95],[-0.95,45.85]]},
+ {id:"angoumois",s:"Angoumois",n:"Angoumois et Marche",c:"domaine",k:1,h:"Le roi",cap:"Angoulême, Guéret",t:"Confisqués en 1308 à la mort de Guy de Lusignan, dernier comte de la Marche et d'Angoulême.",p:[[0.16,45.65],[0.4,45.9],[1.87,46.17],[2.25,45.95],[1.05,46.12],[1.45,46.3]]},
+ {id:"limousin",s:"Limousin",n:"Limousin (vicomté de Limoges)",c:"fief",k:1,h:"Arthur II de Bretagne, vicomte de Limoges, et seigneurs limousins",cap:"Limoges",t:"",p:[[1.26,45.83],[1.77,45.27],[1.53,45.16],[2.05,45.55],[0.85,45.82],[1.6,45.55]]},
+ {id:"perigord",s:"Périgord",n:"Comté de Périgord",c:"fief",k:1,h:"Hélie VII Talleyrand",cap:"Périgueux",t:"",p:[[0.72,45.18],[1.22,44.89],[0.48,44.85],[0.3,45.2],[1.0,45.4],[0.85,45.0]]},
+ {id:"quercy",s:"Quercy",n:"Quercy",c:"domaine",k:1,h:"Le roi",cap:"Cahors",t:"Jacques Duèze, futur pape Jean XXII, est originaire de Cahors.",p:[[1.44,44.45],[2.03,44.6],[1.35,44.02],[1.1,44.15],[1.48,44.9]]},
+ {id:"rouergue",s:"Rouergue",n:"Comté de Rodez",c:"fief",k:1,h:"Bernard VI d'Armagnac, par sa femme Cécile de Rodez",cap:"Rodez",t:"",p:[[2.57,44.35],[3.0,44.1],[2.1,44.35]]},
+ {id:"guyenne",s:"Guyenne",n:"Duché d'Aquitaine (Guyenne)",c:"anglais",k:1,h:"Édouard II, roi d'Angleterre et duc d'Aquitaine",cap:"Bordeaux",lp:[-0.75,44.5],
+  t:"Le roi d'Angleterre tient la Guyenne en vassal du roi de France depuis le traité de Paris (1259). Philippe le Bel l'a confisquée en 1294 et ne l'a rendue qu'en 1303 ; le mariage d'Édouard II avec Isabelle de France (1308) scelle une paix fragile.",
+  p:[[-0.58,44.84],[-0.24,44.92],[-0.95,45.25],[-0.66,45.15],[-1.0,44.6],[-0.75,44.45],[-1.15,44.1],[-1.05,43.71],[-1.47,43.49],[-1.3,43.33],[-0.3,44.7],[-0.4,45.35],[-0.21,44.43]]},
+ {id:"agenais",s:"Agenais",n:"Agenais",c:"anglais",k:1,h:"Édouard II",cap:"Agen",t:"Rendu au roi d'Angleterre en 1279 (traité d'Amiens).",p:[[0.62,44.2],[0.9,44.4],[0.35,44.4]]},
+ {id:"albret",s:"Albret",n:"Seigneurie d'Albret",c:"fief",k:1,h:"Amanieu VII d'Albret",cap:"Nérac",t:"Vassal du duc d'Aquitaine.",p:[[0.25,44.1],[-0.15,44.2],[-0.45,43.98]]},
+ {id:"armagnac",s:"Armagnac",n:"Comté d'Armagnac",c:"fief",k:1,h:"Bernard VI d'Armagnac (1285‑1319)",cap:"Auch",t:"Rival de la maison de Foix pour l'héritage du Béarn.",p:[[0.59,43.65],[0.1,43.8],[0.3,43.45]]},
+ {id:"lomagne",s:"Lomagne",n:"Vicomté de Lomagne",c:"fief",k:1,h:"Arnaud-Garsie de Got, frère du pape Clément V",cap:"Lectoure",t:"Achetée en 1305 par la famille de Bertrand de Got, archevêque de Bordeaux devenu pape la même année.",p:[[0.62,43.93],[0.9,43.85]]},
+ {id:"bigorre",s:"Bigorre",n:"Comté de Bigorre",c:"domaine",k:1,h:"Le roi (séquestre)",cap:"Tarbes",t:"Mis sous séquestre royal en 1292 pendant une querelle de succession, il est réuni de fait au domaine.",p:[[0.07,43.23],[0.05,42.9]]},
+ {id:"comminges",s:"Comminges",n:"Comté de Comminges",c:"fief",k:1,h:"Bernard VII de Comminges",cap:"Saint-Gaudens",t:"",p:[[0.73,43.1],[0.65,42.85],[0.95,43.35]]},
+ {id:"foix",s:"Foix",n:"Comté de Foix",c:"fief",k:1,h:"Gaston Ier de Foix-Béarn (1302‑1315)",cap:"Foix",t:"",p:[[1.6,42.97],[1.85,42.75],[1.15,42.98],[1.65,43.12]]},
+ {id:"bearn",s:"Béarn",n:"Vicomté de Béarn",c:"fief",k:1,h:"Gaston Ier de Foix-Béarn",cap:"Orthez",t:"Uni à Foix depuis 1290 ; la souveraineté du Béarn est revendiquée par ses vicomtes.",p:[[-0.37,43.3],[-0.77,43.49],[-0.6,43.19],[-0.26,43.35],[-0.5,43.85],[-0.7,43.0]]},
+ {id:"languedoc",s:"Languedoc",n:"Languedoc (Toulouse, Carcassonne, Beaucaire)",c:"domaine",k:1,h:"Le roi",cap:"Toulouse",lp:[2.7,43.6],
+  t:"Les trois sénéchaussées ont été réunies au domaine en 1271. Le franciscain Bernard Délicieux y a mené l'agitation contre l'Inquisition (1303‑1305).",
+  p:[[1.44,43.6],[2.35,43.21],[3.0,43.18],[4.36,43.84],[4.55,43.85],[2.15,43.93],[1.75,43.35],[2.22,43.02],[2.5,42.88],[3.5,44.52],[3.88,45.04],[4.4,44.75],[3.25,43.35],[2.6,43.6],[3.3,43.75],[1.05,43.62],[1.4,43.95],[4.0,44.1],[4.62,44.28],[3.0,43.75]]},
+ {id:"montpellier",s:"Montpellier",n:"Seigneurie de Montpellier",c:"fief",k:1,h:"Jacques II, roi de Majorque",cap:"Montpellier",t:"Le roi de Majorque la tient en vassal du roi de France ; elle sera vendue à Philippe VI en 1349.",p:[[3.88,43.6],[3.75,43.52]]},
+ {id:"lyonnais",s:"Lyonnais",n:"Lyonnais et Mâconnais",c:"domaine",k:1,h:"Le roi",cap:"Lyon, Mâcon",t:"Le Mâconnais est royal depuis 1239. En 1310, Philippe le Bel occupe Lyon et capture son archevêque, Pierre de Savoie ; l'annexion de la ville sera reconnue en 1312.",p:[[4.83,45.76],[4.62,45.55],[4.83,46.31],[4.6,46.55]]},
+ {id:"beaujolais",s:"Beaujolais",n:"Seigneurie de Beaujeu",c:"fief",k:1,h:"Guichard VI de Beaujeu",cap:"Beaujeu",t:"",p:[[4.59,46.15],[4.45,46.02]]},
+ {id:"forez",s:"Forez",n:"Comté de Forez",c:"fief",k:1,h:"Jean Ier, comte de Forez",cap:"Montbrison",t:"",p:[[4.07,45.6],[4.07,46.03],[4.4,45.43],[3.85,45.75]]},
+ {id:"bourbon",s:"Bourbonnais",n:"Sirerie de Bourbon et comté de Clermont",c:"prince",k:1,h:"Robert de Clermont, fils de Saint Louis, et Béatrice de Bourbon",cap:"Moulins",lp:[3.15,46.4],
+  t:"Sixième fils de Saint Louis, Robert a épousé l'héritière du Bourbonnais ; il tient aussi Clermont-en-Beauvaisis. Leur fils Louis sera le premier duc de Bourbon (1327).",p:[[3.33,46.57],[2.6,46.35],[3.5,46.2],[3.0,46.3],[3.7,46.35],[2.41,49.38]]},
+ {id:"auvergne",s:"Auvergne",n:"Terre royale d'Auvergne",c:"domaine",k:1,h:"Le roi",cap:"Riom",t:"Le comte d'Auvergne et le dauphin d'Auvergne y gardent leurs propres terres.",p:[[3.08,45.78],[2.45,44.93],[3.38,45.3],[2.75,45.4],[3.11,45.92],[3.25,45.55],[3.1,44.95],[2.33,45.22],[2.55,45.7]]},
+ {id:"bourgogne",s:"Bourgogne",n:"Duché de Bourgogne",c:"fief",k:1,h:"Hugues V (1306‑1315), duc capétien",cap:"Dijon",t:"Duché de la première branche capétienne cadette, issue de Robert, frère d'Henri Ier.",
+  p:[[5.04,47.32],[4.3,46.95],[4.85,46.78],[4.57,47.86],[4.23,47.28],[4.84,47.02],[3.91,47.49],[4.3,46.45],[5.15,47.6],[4.6,47.5]]},
+ {id:"franchecomte",s:"Comté",n:"Comté de Bourgogne (Franche-Comté)",c:"empire",k:0,h:"Jeanne de Bourgogne et son époux Philippe de Poitiers, fils du roi",cap:"Dole",t:"Terre d'Empire passée dans l'orbite capétienne ; Philippe de Poitiers deviendra roi en 1316.",p:[[6.02,47.24],[5.9,46.8],[6.15,47.62],[5.5,47.1],[5.55,46.67],[6.35,46.9],[6.8,47.5],[5.6,47.44],[6.1,46.45]]},
+ {id:"alsace",s:"Alsace",n:"Alsace",c:"empire",k:0,h:"Bailli impérial, évêque et ville de Strasbourg, Habsbourg",cap:"Strasbourg",t:"",p:[[7.7,48.58],[7.32,48.08],[7.25,47.75],[7.75,48.85],[7.45,48.35],[7.0,47.65]]},
+ {id:"empire",s:"Saint‑Empire",n:"Saint-Empire (Rhénanie, Souabe)",c:"empire",k:0,h:"Henri VII, roi des Romains",cap:"",lp:[8.2,50.1],t:"",p:[[6.64,49.75],[7.6,50.35],[8.27,50.0],[8.43,49.32],[8.7,49.4],[8.24,48.76],[9.18,48.78],[7.94,48.4],[7.85,48.0],[6.96,50.94],[6.08,50.78],[6.78,51.3],[7.0,49.23],[7.4,49.25],[8.7,50.6],[9.3,50.1],[9.3,49.3],[9.2,47.75],[8.7,48.2],[6.0,51.4],[7.5,51.4],[8.5,51.3]]},
+ {id:"suisse",s:"Suisse",n:"Pays suisses",c:"empire",k:0,h:"Waldstätten, Habsbourg, évêques de Bâle et de Sion",cap:"",lp:[8.0,47.0],t:"",p:[[7.45,46.95],[8.54,47.37],[8.3,47.05],[7.59,47.55],[8.9,46.9],[9.37,47.42],[8.2,47.45],[7.15,46.8],[8.0,46.65],[9.45,46.85],[7.36,46.23],[7.9,46.3]]},
+ {id:"savoie",s:"Savoie",n:"Comté de Savoie",c:"empire",k:0,h:"Amédée V le Grand",cap:"Chambéry",lp:[6.3,45.62],t:"",p:[[5.92,45.57],[6.13,45.9],[6.4,45.5],[6.55,45.25],[6.7,45.6],[6.5,46.35],[6.63,46.52],[6.15,46.2],[5.22,46.2],[5.5,45.9],[7.32,45.74],[6.95,46.0],[7.7,45.07],[7.4,44.85],[7.85,45.4],[7.05,45.15],[6.8,46.75]]},
+ {id:"dauphine",s:"Dauphiné",n:"Dauphiné de Viennois",c:"empire",k:0,h:"Jean II, dauphin",cap:"Grenoble",t:"Il ne sera vendu au fils du roi de France qu'en 1349.",p:[[5.72,45.19],[4.95,45.0],[6.08,44.56],[6.64,44.9],[5.37,44.75],[5.3,45.5],[4.88,45.52],[5.6,44.4],[6.3,45.0],[6.85,44.72]]},
+ {id:"provence",s:"Provence",n:"Comté de Provence",c:"empire",k:0,h:"Robert d'Anjou, roi de Naples",cap:"Aix",t:"Avignon appartient au comte de Provence : le pape Clément V s'y est installé en mars 1309.",
+  p:[[5.45,43.53],[5.37,43.3],[5.93,43.12],[6.23,44.09],[7.27,43.72],[6.46,43.54],[5.78,43.96],[5.94,44.2],[6.65,44.38],[4.7,43.65],[6.9,43.95],[5.1,43.64],[6.74,43.43],[6.1,43.7],[4.83,43.95]]},
+ {id:"comtat",s:"Comtat",n:"Comtat Venaissin",c:"eglise",k:0,h:"Le pape Clément V",cap:"Carpentras",t:"Possession pontificale depuis 1274.",p:[[5.05,44.06],[5.07,44.25],[5.0,44.15]]},
+ {id:"majorque",s:"Roussillon",n:"Roussillon et Cerdagne (royaume de Majorque)",c:"etranger",k:0,h:"Jacques II de Majorque",t:"",p:[[2.9,42.7],[2.6,42.58],[2.0,42.43]]},
+ {id:"aragon",s:"Aragon",n:"Couronne d'Aragon",c:"etranger",k:0,h:"Jacques II d'Aragon",lp:[0.4,41.75],t:"",p:[[2.82,41.98],[2.17,41.4],[1.5,41.8],[1.3,42.2],[0.6,41.62],[-0.9,41.65],[-0.55,42.57],[0.2,42.4],[0.85,42.6],[-0.41,42.14],[-1.64,41.35],[2.5,42.2]]},
+ {id:"castille",s:"Castille",n:"Couronne de Castille",c:"etranger",k:0,h:"Ferdinand IV",lp:[-3.9,42.3],t:"",p:[[-2.2,43.2],[-2.7,42.85],[-2.45,42.47],[-2.5,41.8],[-3.0,43.3],[-3.7,43.35],[-3.7,42.35],[-4.7,41.65],[-4.6,42.6],[-5.3,43.2],[-3.5,41.3],[-5.2,41.3]]},
+ {id:"angleterre",s:"Angleterre",n:"Royaume d'Angleterre",c:"etranger",k:0,h:"Édouard II",lp:[-2.3,51.1],t:"",p:[[-1.0,51.2],[-3.5,50.8],[-4.8,50.4],[0.5,51.2],[-2.3,51.3],[1.2,51.3]]},
+ {id:"genes",s:"Gênes",n:"Ligurie et Corse",c:"etranger",k:0,h:"République de Gênes",lp:[8.45,44.25],t:"",p:[[8.93,44.41],[8.48,44.31],[8.2,44.05],[7.75,43.82],[9.3,44.32],[9.1,42.2],[9.35,42.65],[8.95,41.75]]},
+ {id:"italie",s:"Italie",n:"Italie du Nord",c:"etranger",k:0,h:"Communes et seigneurs lombards",lp:[8.9,45.25],t:"",p:[[9.19,45.46],[8.45,45.13],[8.62,44.91],[8.62,45.45],[9.3,46.0],[8.05,44.7],[7.6,44.4],[8.4,46.0]]}
+],
+points:[
+ ["Paris",2.35,48.86,"ville","Capitale du royaume, la plus grande ville d'Occident.",1],["Rouen",1.1,49.44,"ville","",1],["Reims",4.03,49.25,"ville","Ville du sacre.",1],["Lyon",4.83,45.76,"ville","Occupée par Philippe le Bel en 1310.",1],
+ ["Toulouse",1.44,43.6,"ville","",1],["Bordeaux",-0.58,44.84,"ville","Capitale de la Guyenne anglaise.",1],["Avignon",4.81,43.95,"ville","Résidence du pape Clément V depuis 1309.",1],["Bruges",3.22,51.21,"ville","",1],["Dijon",5.04,47.32,"ville","",1],
+ ["Montpellier",3.88,43.6,"ville",""],["Nantes",-1.55,47.22,"ville",""],["Rennes",-1.68,48.11,"ville",""],["Bourges",2.4,47.08,"ville",""],["Poitiers",0.34,46.58,"ville",""],
+ ["La Rochelle",-1.15,46.16,"ville",""],["Angers",-0.55,47.47,"ville",""],["Tours",0.69,47.39,"ville",""],["Orléans",1.9,47.9,"ville",""],["Troyes",4.07,48.3,"ville",""],
+ ["Gand",3.72,51.05,"ville",""],["Lille",3.06,50.63,"ville",""],["Arras",2.78,50.29,"ville",""],["Amiens",2.3,49.9,"ville",""],["Caen",-0.37,49.18,"ville",""],["Courtrai",3.27,50.83,"ville","Bataille des Éperons d'or, 1302."],
+ ["Limoges",1.26,45.83,"ville",""],["Clermont",3.08,45.78,"ville",""],["Carcassonne",2.35,43.21,"ville",""],["Narbonne",3.0,43.18,"ville",""],["Marseille",5.37,43.3,"ville",""],
+ ["Bayonne",-1.47,43.49,"ville",""],["Calais",1.86,50.95,"ville",""],["Angoulême",0.16,45.65,"ville",""],["Cahors",1.44,44.45,"ville",""],["Pampelune",-1.64,42.82,"ville",""]
+],
+events:[
+ {d:"11 juil. 1302",t:"Courtrai",x:"Les milices flamandes écrasent la chevalerie française : la bataille des Éperons d'or.",at:[3.27,50.83]},
+ {d:"18 août 1304",t:"Mons-en-Pévèle",x:"Philippe le Bel prend sa revanche sur les Flamands.",at:[3.1,50.48]},
+ {d:"juin 1305",t:"Traité d'Athis-sur-Orge",x:"La Flandre doit payer une lourde indemnité et livrer des gages au roi.",at:[2.38,48.71]},
+ {d:"22 juil. 1306",t:"Expulsion des Juifs",x:"Le roi fait arrêter les Juifs du royaume, confisque leurs biens et les expulse.",at:[2.35,48.86]},
+ {d:"13 oct. 1307",t:"Arrestation des Templiers",x:"Sur ordre du roi, tous les Templiers du royaume sont arrêtés à l'aube, dont le grand maître Jacques de Molay.",at:[2.36,48.865]},
+ {d:"25 janv. 1308",t:"Mariage à Boulogne",x:"Édouard II d'Angleterre épouse Isabelle, fille de Philippe le Bel.",at:[1.62,50.72]},
+ {d:"1308",t:"Confiscation d'Angoulême et de la Marche",x:"À la mort de Guy de Lusignan, le roi réunit les deux comtés à son domaine.",at:[0.16,45.65]},
+ {d:"mars 1309",t:"Clément V à Avignon",x:"Le pape gascon s'installe dans la ville du comte de Provence, aux portes du royaume.",at:[4.81,43.95]},
+ {d:"12 mai 1310",t:"Bûcher des Templiers",x:"Cinquante-quatre Templiers qui s'étaient rétractés sont brûlés près de Paris.",at:[2.38,48.85]},
+ {d:"été 1310",t:"Prise de Lyon",x:"Les troupes royales occupent Lyon et capturent l'archevêque Pierre de Savoie.",at:[4.83,45.76]},
+ {d:"1311‑1312",t:"Concile de Vienne",x:"Le pape supprime l'ordre du Temple (22 mars 1312).",at:[4.87,45.52]},
+ {d:"29 nov. 1314",t:"Mort de Philippe le Bel",x:"Le roi meurt à Fontainebleau, quelques mois après le bûcher de Jacques de Molay.",at:[2.7,48.4]}
+],
+chronTitle:"Les années Philippe le Bel, 1302‑1314",
+overview:`<p class="panel-eyebrow">Année 1310</p><h2>Le royaume du roi de fer</h2>
+<p>Philippe IV le Bel règne depuis 1285. Ses légistes ont brisé le pape Boniface VIII (Anagni, 1303), ses armées ont soumis la Flandre, et le procès des Templiers est en cours.</p>
+<div class="stats"><div><b>{N}</b><span>terres figurées</span></div><div><b>3</b><span>apanages de la famille royale</span></div><div><b>3</b><span>terres anglaises</span></div></div>
+<p>Le roi d'Angleterre tient la Guyenne, l'Agenais et le Ponthieu en vassal du roi de France. Cette double fidélité mènera à la guerre de Cent Ans.</p>
+<p style="color:var(--muted)">Cliquez sur une terre ou cherchez-la dans l'index.</p>`
+};
+</script>
+<script>
+/* tracé des côtes (commun à la carte de France) */
+window.ATLAS.land=[
+ [[3.6,51.5],[9.6,51.5],[9.6,44.2],[8.93,44.41],[8.45,44.3],[8.2,43.98],[7.8,43.8],[7.42,43.73],[7.27,43.69],[7.0,43.55],[6.75,43.42],[6.65,43.25],[6.35,43.1],[5.93,43.1],[5.6,43.17],[5.35,43.3],[5.05,43.33],[4.85,43.38],[4.6,43.36],[4.2,43.47],[3.9,43.52],[3.5,43.28],[3.2,43.2],[3.05,42.95],[3.03,42.7],[3.17,42.43],[3.3,42.3],[3.1,42.1],[3.2,41.9],[2.8,41.65],[2.2,41.37],[1.6,41.2],[0.95,41.03],[0.85,40.9],[-5.6,40.9],[-5.6,43.55],[-4.5,43.4],[-3.8,43.47],[-3.0,43.37],[-2.5,43.4],[-1.8,43.38],[-1.55,43.48],[-1.45,43.75],[-1.3,44.2],[-1.25,44.65],[-1.18,45.0],[-1.13,45.35],[-1.07,45.57],[-0.95,45.42],[-0.78,45.22],[-0.6,45.04],[-0.55,45.02],[-0.65,45.15],[-0.82,45.35],[-0.98,45.52],[-1.03,45.62],[-1.22,45.72],[-1.1,45.9],[-1.15,46.15],[-1.4,46.35],[-1.8,46.5],[-2.1,46.85],[-2.05,47.05],[-2.25,47.15],[-2.5,47.3],[-2.95,47.5],[-3.5,47.7],[-4.1,47.8],[-4.37,47.8],[-4.73,48.04],[-4.3,48.18],[-4.6,48.3],[-4.77,48.45],[-4.55,48.62],[-4.0,48.7],[-3.5,48.85],[-3.0,48.8],[-2.7,48.55],[-2.2,48.62],[-2.0,48.65],[-1.6,48.65],[-1.55,49.0],[-1.65,49.4],[-1.9,49.7],[-1.6,49.66],[-1.25,49.7],[-1.25,49.4],[-1.0,49.38],[-0.3,49.3],[0.1,49.42],[0.2,49.7],[0.6,49.86],[1.1,49.95],[1.5,50.2],[1.6,50.6],[1.6,50.9],[1.9,50.97],[2.4,51.05],[2.9,51.25],[3.4,51.4],[3.6,51.5]],
+ [[-5.7,50.05],[-5.0,50.0],[-4.2,50.35],[-3.5,50.5],[-2.9,50.7],[-2.0,50.6],[-1.3,50.8],[-0.8,50.75],[0.2,50.75],[1.0,50.95],[1.4,51.2],[1.45,51.38],[0.9,51.6],[-2.7,51.6],[-3.0,51.3],[-3.8,51.22],[-4.2,51.1],[-4.5,50.9],[-5.0,50.5]],
+ [[9.35,43.0],[9.45,42.7],[9.55,42.1],[9.4,41.6],[9.2,41.37],[8.8,41.6],[8.6,41.9],[8.6,42.3],[8.75,42.6],[9.1,42.7]]
+];
+window.ATLAS.waters=[[[6.15,46.21],[6.35,46.37],[6.6,46.47],[6.85,46.45],[6.9,46.38],[6.6,46.4],[6.35,46.31],[6.2,46.25]]];
+window.ATLAS.seas=[["Océan",-3.4,46.3,18],["Manche",-2.6,49.65,12],["Mer Méditerranée",4.6,42.55,14]];
+window.ATLAS.rivers=[
+ [[0.2,49.45],[0.75,49.4],[1.1,49.44],[1.4,49.3],[1.72,49.0],[2.1,48.95],[2.35,48.86],[2.6,48.6],[2.95,48.38],[3.5,48.5],[4.07,48.3],[4.5,47.85],[4.72,47.5]],
+ [[-2.2,47.28],[-1.55,47.22],[-0.55,47.4],[0.0,47.25],[0.69,47.4],[1.33,47.59],[1.9,47.9],[2.3,47.7],[2.9,47.3],[3.15,46.99],[3.46,46.83],[3.85,46.45],[4.07,46.03],[4.2,45.6],[4.1,45.2],[4.0,44.85]],
+ [[4.75,43.45],[4.63,43.68],[4.81,43.95],[4.7,44.3],[4.88,44.93],[4.88,45.52],[4.83,45.76],[5.3,45.85],[5.8,46.0],[6.15,46.2]],
+ [[4.83,45.76],[4.83,46.3],[4.85,46.78],[5.2,47.1],[5.6,47.45],[5.95,47.9]],
+ [[-0.55,45.03],[-0.58,44.84],[-0.05,44.58],[0.3,44.4],[0.62,44.2],[1.1,44.1],[1.44,43.6],[1.1,43.3],[0.75,43.1],[0.65,42.8]],
+ [[-0.55,45.03],[-0.24,44.92],[0.48,44.85],[1.0,44.85],[1.5,44.95],[2.0,45.1],[2.5,45.5]],
+ [[5.6,47.95],[5.6,48.6],[5.38,49.16],[4.95,49.7],[4.72,49.77],[4.87,50.47],[5.57,50.63],[5.7,51.0],[5.9,51.4]],
+ [[9.2,47.65],[8.6,47.6],[7.6,47.56],[7.6,48.0],[7.8,48.6],[8.2,49.0],[8.45,49.5],[8.27,50.0],[7.6,50.35],[7.1,50.7],[6.96,50.94],[6.7,51.3]],
+ [[3.3,49.95],[3.52,50.36],[3.4,50.6],[3.72,51.05],[4.1,51.03],[4.4,51.22],[4.0,51.42]],
+ [[1.6,50.18],[1.85,50.15],[2.3,49.9],[2.9,49.9],[3.29,49.85]]
+];
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="atlas.js"></script>
+</body></html>
