@@ -2,7 +2,7 @@
    Chaque page définit window.ATLAS puis charge d3 et ce fichier. */
 (function(){
 const A=window.ATLAS;
-const NAV=[["france-1310.html","France"],["empire-1310.html","Saint-Empire"],["italie-1310.html","Italie"],["pologne-1310.html","Pologne et Lituanie"]];
+const NAV=[["france-1310.html","France"],["empire-1310.html","Saint-Empire"],["italie-1310.html","Italie"],["pologne-1310.html","Pologne et Lituanie"],["orient-1310.html","Orient latin"]];
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const here=location.pathname.split("/").pop()||"index.html";
 
