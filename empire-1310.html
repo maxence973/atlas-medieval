@@ -100,6 +100,10 @@ aside{display:flex;flex-direction:column;gap:20px;min-width:0}
 .panel dt{font-family:var(--f-label);color:var(--muted);font-size:14px;padding-top:2px}
 .panel dd{margin:0}
 .panel p{margin:0 0 10px}
+.blason{float:right;margin:2px 0 8px 14px;width:76px;text-align:center}
+.blason img{display:block;width:76px;height:88px;object-fit:contain;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
+.blason figcaption{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.2}
+.blason figcaption a{color:inherit}
 .badge{display:inline-block;font-family:var(--f-label);font-size:13px;letter-spacing:.05em;border:1px solid var(--ink);padding:0 6px;margin-left:6px;vertical-align:2px}
 .chip{display:inline-flex;align-items:center;gap:8px}
 .sw{width:16px;height:16px;border:1px solid var(--coast);flex:none;display:inline-block}
@@ -202,6 +206,7 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--rule);color:v
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="blasons.js"></script>
 <script>
 (function(){
 const CATS={
@@ -777,7 +782,7 @@ function renderPanel(){
     return;
   }
   const r=byId[state.sel];
-  panel.innerHTML=`<p class="panel-eyebrow">${esc(CATS[r.c].label)}</p>
+  panel.innerHTML=`${blasonHTML(r.id,r.n)}<p class="panel-eyebrow">${esc(CATS[r.c].label)}</p>
     <h2>${esc(r.n)}${r.e?'<span class="badge">Électeur</span>':""}</h2>
     <dl>
       ${famOf(r)!=="autres"&&famOf(r)!=="prelats"&&famOf(r)!=="communes"?`<dt>Famille</dt><dd><span class="chip"><span class="sw" style="background:${FAM[famOf(r)].color}"></span>${esc(FAM[famOf(r)].label)}</span></dd>`:""}

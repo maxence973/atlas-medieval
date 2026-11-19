@@ -202,7 +202,7 @@ function renderPanel(){
     return;
   }else{
     const r=byId[state.sel],C=CATS[r.c];
-    panel.innerHTML=`<p class="panel-eyebrow">${esc(C.label)}</p><h2>${esc(r.n)}</h2>
+    panel.innerHTML=`${window.blasonHTML?blasonHTML(r.id,r.n):""}<p class="panel-eyebrow">${esc(C.label)}</p><h2>${esc(r.n)}</h2>
       <dl><dt>Statut</dt><dd><span class="chip"><span class="sw" style="background:${C.color}"></span>${esc(C.sub||C.label)}</span></dd>
       ${r.h?`<dt>Tenu par</dt><dd>${esc(r.h)}</dd>`:""}
       ${r.cap?`<dt>Chef-lieu</dt><dd>${esc(r.cap)}</dd>`:""}
