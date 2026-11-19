@@ -9,23 +9,26 @@
 <script>
 window.ATLAS={
 eyebrow:"Atlas de l'Europe médiévale",
-title:"L'Italie en 1310",
-lede:"À l'automne 1310, Henri VII franchit les Alpes pour ceindre la couronne de fer et la couronne impériale. Il trouve une Italie déchirée entre Guelfes, fidèles au pape et aux Angevins de Naples, et Gibelins, partisans de l'empereur. Dante, exilé de Florence, salue sa venue. Les couleurs indiquent le camp de chaque puissance.",
-frame:{lon0:6.5,lat1:47.2,lonSpan:12.5,latSpan:10.7,midLat:42,K:80},
+title:"L'Italie et l'Adriatique en 1310",
+lede:"À l'automne 1310, Henri VII franchit les Alpes pour ceindre la couronne de fer et la couronne impériale. Il trouve une Italie déchirée entre Guelfes, fidèles au pape et aux Angevins de Naples, et Gibelins, partisans de l'empereur. Dante, exilé de Florence, salue sa venue. Les couleurs indiquent le camp de chaque puissance. Au-delà de l'Adriatique, les Angevins règnent sur la Hongrie, tiennent Durazzo, Corfou et l'Achaïe, et leurs alliés Šubić dominent la Croatie.",
+frame:{lon0:6.5,lat1:47.2,lonSpan:17.8,latSpan:10.95,midLat:42,K:80},
 borderLabel:"Limite du royaume d'Italie impérial",borderToggle:"Royaume d'Italie",
 kLabels:["Souveraineté","Royaume d'Italie (Saint-Empire)","Hors du royaume d'Italie"],
 cats:{
  guelfe:{label:"Communes et seigneurs guelfes",sub:"Alliés du pape et des Angevins",color:"#c4473a"},
  gibelin:{label:"Communes et seigneurs gibelins",sub:"Partisans de l'empereur",color:"#6e6b76"},
  autre:{label:"Pouvoirs partagés ou neutres",sub:"Villes divisées, princes ecclésiastiques, marquis",color:"#cbbd9c"},
- angevin:{label:"Angevins de Naples",sub:"Royaume de Sicile péninsulaire et Provence",color:"#2d4f9e",lys:true},
+ angevin:{label:"Angevins de Naples",sub:"Royaume de Sicile péninsulaire, Provence et terres d'outre-Adriatique",color:"#2d4f9e",lys:true},
+ hongrie:{label:"Couronne de Hongrie",sub:"Charles Robert d'Anjou, petit-fils de Charles II de Naples",color:"#6f8fd6"},
+ subic:{label:"Šubić de Bribir",sub:"Bans de Croatie, de Dalmatie et de Bosnie, alliés des Angevins",color:"#8a63b3"},
+ franque:{label:"Grèce franque",sub:"Seigneurs latins, vassaux du prince d'Achaïe",color:"#c08a4a"},
  sicile:{label:"Royaume de Trinacrie",sub:"Sicile aragonaise de Frédéric III",color:"#e0973a"},
  eglise:{label:"États de l'Église",sub:"Terres du pape, alors à Avignon",color:"#e8d68a"},
  venise:{label:"Venise",sub:"Dogado et comptoirs de l'Adriatique",color:"#2b8e86"},
  empire:{label:"Saint-Empire au nord des Alpes",sub:"Hors du royaume d'Italie",color:"#8fae84"},
  out:{label:"Autres États",sub:"",color:"#cfcabd",out:true}
 },
-catOrder:["guelfe","gibelin","autre","angevin","sicile","eglise","venise","empire","out"],
+catOrder:["guelfe","gibelin","autre","angevin","hongrie","subic","franque","sicile","eglise","venise","empire","out"],
 regions:[
  /* Piémont et Ligurie */
  {id:"savoie",s:"Savoie",n:"Comté de Savoie (versant italien)",c:"gibelin",k:0,h:"Amédée V le Grand",cap:"Chambéry",t:"Le comte accueille Henri VII et l'accompagne en Italie. Le val d'Aoste et la vallée de Suse lui appartiennent.",p:[[6.9,45.6],[7.32,45.74],[7.05,45.15],[6.6,46.3],[6.6,45.4]]},
@@ -112,9 +115,29 @@ regions:[
  {id:"suisse",s:"Suisse",n:"Valais, Waldstätten et Grisons",c:"empire",k:0,h:"Évêques de Sion et de Coire, communautés de vallée",cap:"",t:"",p:[[7.36,46.23],[8.0,46.6],[8.5,46.9],[9.53,46.85],[9.8,46.6],[7.45,46.95]]},
  {id:"dauphine",s:"Dauphiné",n:"Dauphiné",c:"empire",k:0,h:"Jean II, dauphin",cap:"Grenoble",t:"",p:[[6.64,44.9],[6.6,44.6]]},
  /* Hors */
- {id:"hongrie",s:"Hongrie‑Croatie",n:"Royaume de Hongrie et Croatie",c:"out",k:0,h:"Charles Robert d'Anjou",lp:[16.5,45.3],t:"",p:[[16.0,45.81],[15.5,45.3],[16.6,45.4],[15.3,44.6],[16.2,44.1],[16.4,43.55],[17.2,45.0],[17.0,46.3],[18.0,46.5],[18.5,45.5],[16.6,47.0],[17.6,47.0],[18.7,47.0],[14.9,45.05]]},
- {id:"bosnie",s:"Bosnie",n:"Banat de Bosnie",c:"out",k:0,h:"",t:"",p:[[17.8,44.2],[18.4,43.85],[17.5,43.4]]},
- {id:"serbie",s:"Serbie",n:"Royaume de Serbie",c:"out",k:0,h:"Étienne Milutin",t:"",p:[[18.9,42.6],[18.8,43.3],[18.95,44.0]]},
+ /* Croatie et Hongrie */
+ {id:"croatie",s:"Croatie",n:"Banat de Croatie et de Dalmatie",c:"subic",k:0,h:"Paul Ier Šubić de Bribir, ban († 1312)",cap:"Bribir, Skradin",lp:[15.9,44.0],t:"Le plus puissant seigneur de l'Adriatique orientale. Partisan des Angevins de Naples, il a fait venir le jeune Charles Robert, débarqué à Split en 1300, pour lui donner la couronne de Hongrie. Il tient Split, Trogir, Šibenik et Nin.",p:[[15.82,43.93],[15.9,43.73],[16.44,43.51],[16.25,43.52],[16.2,44.04],[16.69,43.44],[15.4,44.55],[15.19,44.24],[15.6,44.3],[16.9,43.75]]},
+ {id:"krk",s:"Krk",n:"Comtes de Krk (futurs Frankopan)",c:"hongrie",k:0,h:"Les comtes de Krk",cap:"Krk, Senj",t:"Maîtres de l'île de Krk, du Vinodol et de Senj, vassaux du roi de Hongrie ; ils prendront le nom de Frankopan au XVe siècle.",p:[[14.58,45.03],[14.9,45.0],[14.7,45.18],[15.1,45.2]]},
+ {id:"slavonie",s:"Slavonie",n:"Banat de Slavonie",c:"hongrie",k:0,h:"Jean Babonić, ban (1310‑1316)",cap:"Zagreb",t:"Entre Save et Drave, la Slavonie relève du roi de Hongrie ; les Babonić et les Kőszegi s'en disputent la charge de ban.",p:[[15.98,45.81],[16.54,46.02],[17.68,45.33],[17.19,45.44],[19.0,45.35],[18.4,45.55],[15.6,45.5]]},
+ {id:"hongrie",s:"Hongrie",n:"Royaume de Hongrie",c:"hongrie",k:0,h:"Charles Robert d'Anjou (1301/1308‑1342)",cap:"Székesfehérvár, Buda",lp:[19.3,46.6],t:"Petit-fils de Charles II de Naples et neveu du roi Robert, Charles Robert est enfin couronné avec la Sainte Couronne le 27 août 1310, mais les grands oligarques, comme Máté Csák, tiennent encore la moitié du royaume.",p:[[18.41,47.1],[19.5,46.5],[20.15,46.25],[21.3,46.2],[21.5,47.0],[18.7,46.9],[17.6,47.0],[16.6,47.0],[17.9,46.07],[21.2,45.75],[22.3,45.3],[19.0,46.0],[20.5,45.3]]},
+ {id:"transylvanie",s:"Transylvanie",n:"Voïvodie de Transylvanie",c:"hongrie",k:0,h:"Ladislas Kán, voïvode",cap:"Alba Iulia",t:"Ladislas Kán, qui avait saisi la Sainte Couronne, ne l'a rendue qu'en 1310 ; il gouverne la province en prince presque indépendant.",p:[[23.6,46.77],[24.1,45.8],[23.57,46.07],[22.9,47.0],[24.1,46.6],[22.8,46.0]]},
+ {id:"syrmie",s:"Syrmie",n:"Royaume de Syrmie",c:"out",k:0,h:"Étienne Dragutin, frère du roi de Serbie",cap:"Belgrade",t:"Ancien roi de Serbie, Dragutin règne sur Belgrade, la Mačva et l'Usora en vassal du roi de Hongrie, et dispute la Serbie à son frère Milutin.",p:[[20.46,44.82],[19.7,44.7],[18.6,44.55],[19.9,45.1]]},
+ {id:"bosnie",s:"Bosnie",n:"Banat de Bosnie",c:"subic",k:0,h:"Mladen II Šubić, ban, fils de Paul Ier",cap:"",t:"Les Šubić dominent la Bosnie depuis 1299 ; les Kotromanić ne la reprendront qu'en 1322. Mladen tient aussi l'ouest du Hum, sur la Neretva.",p:[[17.8,44.2],[18.4,43.85],[17.5,43.4],[17.2,44.5],[18.0,43.5],[17.65,43.1],[17.4,43.25]]},
+ {id:"serbie",s:"Serbie",n:"Royaume de Serbie",c:"out",k:0,h:"Étienne Milutin (1282‑1321)",cap:"Skopje, Prizren",lp:[20.6,42.9],t:"Milutin a conquis le nord de la Macédoine sur Byzance et tient la Zeta, Cattaro et le nord de l'Albanie avec Scutari ; il a épousé Simonide, fille de l'empereur Andronic II, en 1299.",p:[[19.51,42.07],[18.35,42.71],[18.75,43.0],[20.74,42.21],[21.43,42.0],[19.1,42.1],[18.77,42.42],[20.5,43.14],[20.29,42.66],[21.9,43.3],[20.9,43.6],[22.2,41.75],[19.8,43.0]]},
+ /* Adriatique angevine et Grèce */
+ {id:"durazzo",s:"Durazzo",n:"Royaume d'Albanie angevin (Durazzo)",c:"angevin",k:0,h:"Philippe Ier de Tarente, « seigneur du royaume d'Albanie »",cap:"Durazzo",t:"Charles Ier d'Anjou s'était proclamé roi d'Albanie en 1272. Son petit-fils Philippe de Tarente en détient les droits depuis 1294, mais l'Albanie angevine se réduit à Durazzo et à sa plaine. Le duché de Durazzo ne naîtra qu'en 1332, pour Jean de Gravina, frère de Philippe.",p:[[19.45,41.32],[19.6,41.1],[19.7,41.5]]},
+ {id:"corfou",s:"Corfou",n:"Corfou",c:"angevin",k:0,h:"Philippe Ier de Tarente",cap:"Corfou",t:"Angevine depuis 1267, l'île fait partie de l'apanage de Philippe de Tarente depuis 1294.",p:[[19.92,39.62],[19.75,39.72],[20.05,39.45]]},
+ {id:"achaie-gr",s:"Achaïe",n:"Principauté d'Achaïe (Morée franque)",c:"angevin",k:0,h:"Philippe Ier de Tarente, prince (1307‑1313)",cap:"Andravida, Glarentza",lp:[21.9,37.55],t:"Les Angevins sont suzerains de la Morée franque depuis 1278. En 1307, Charles II a dépossédé Philippe de Savoie au profit de son fils Philippe de Tarente, qui gouverne par un bayle.",p:[[21.27,37.9],[21.73,38.25],[22.11,37.04],[22.93,37.9],[22.1,38.0],[22.04,37.49],[21.6,37.3],[22.4,37.7]]},
+ {id:"modon",s:"Modon",n:"Modon et Coron",c:"venise",k:0,h:"Venise",cap:"Modon",t:"Comptoirs vénitiens depuis 1207, « les yeux de la République » sur la route du Levant.",p:[[21.7,36.82],[21.95,36.8]]},
+ {id:"moree-byz",s:"Mistra",n:"Morée byzantine",c:"out",k:0,h:"Le gouverneur de Mistra, au nom d'Andronic II",cap:"Mistra",t:"Depuis 1262, Byzance a repris le sud-est du Péloponnèse aux princes d'Achaïe.",p:[[22.37,37.07],[23.04,36.69],[22.6,36.6],[22.85,37.2]]},
+ {id:"athenes",s:"Athènes",n:"Duché d'Athènes",c:"franque",k:0,h:"Gautier V de Brienne (1308‑1311)",cap:"Athènes, Thèbes",lp:[23.4,38.15],t:"En 1310, Gautier engage la Compagnie catalane contre la Thessalie ; refusant ensuite de la payer, il sera tué par elle à la bataille du Céphise le 15 mars 1311. Le duché tient aussi Argos et Nauplie.",p:[[23.73,37.98],[23.32,38.32],[22.87,38.44],[22.73,37.63],[22.8,37.57],[23.9,38.1]]},
+ {id:"negrepont",s:"Négrepont",n:"Négrepont (Eubée)",c:"franque",k:0,h:"Les tierciers lombards, avec un baile vénitien",cap:"Négrepont",t:"L'île est partagée entre trois seigneurs lombards, vassaux du prince d'Achaïe et protégés par Venise.",p:[[23.6,38.47],[23.4,38.75],[24.1,38.4]]},
+ {id:"cephalonie",s:"Céphalonie",n:"Comté palatin de Céphalonie et Zante",c:"franque",k:0,h:"Jean Ier Orsini (1304‑1317)",cap:"Céphalonie",t:"Les Orsini, venus d'Italie du Sud, tiennent les îles Ioniennes en vassaux du prince d'Achaïe.",p:[[20.55,38.25],[20.8,37.78]]},
+ {id:"epire",s:"Épire",n:"Despotat d'Épire",c:"out",k:0,h:"Thomas Ier Comnène Doukas (1296‑1318)",cap:"Arta",t:"Sa sœur Thamar a épousé Philippe de Tarente en 1294 ; les Angevins réclament des places d'Épire en dot et l'ont attaqué en 1304 et 1306.",p:[[20.98,39.16],[20.85,39.67],[20.4,39.4],[21.3,38.9],[20.7,38.8]]},
+ {id:"thessalie",s:"Thessalie",n:"Thessalie",c:"out",k:0,h:"Jean II Doukas, sébastocrator (1303‑1318)",cap:"Néopatras",t:"La Compagnie catalane y a hiverné en 1309‑1310 avant de passer au service du duc d'Athènes.",p:[[22.42,39.64],[22.29,38.87],[21.77,39.55],[22.95,39.36],[21.8,39.1]]},
+ {id:"byzance",s:"Byzance",n:"Empire byzantin",c:"out",k:0,h:"Andronic II Paléologue (1282‑1328)",cap:"Constantinople",lp:[22.2,40.85],t:"Thessalonique, la Macédoine et, sur l'Adriatique, Berat et Valona. La Compagnie catalane, engagée en 1303 puis révoltée, ravage ses provinces depuis 1305.",p:[[22.95,40.64],[19.95,40.7],[19.49,40.47],[20.8,41.12],[21.27,40.52],[23.55,41.09],[23.5,40.3],[24.0,41.5],[21.55,41.35],[20.25,40.2],[22.2,40.3]]},
+ {id:"bulgarie",s:"Bulgarie",n:"Tsarat de Bulgarie",c:"out",k:0,h:"Théodore Svetoslav (1300‑1322)",cap:"Tarnovo",t:"",p:[[23.32,42.7],[22.87,43.99],[24.0,43.3],[22.7,42.3],[23.9,42.2]]},
+ {id:"valachie",s:"Valachie",n:"Valachie",c:"out",k:0,h:"Basarab Ier (vers 1310‑1352)",cap:"Câmpulung",t:"Le premier prince de Valachie apparaît vers 1310 ; il battra Charles Robert à Posada en 1330.",p:[[23.8,44.5],[24.0,45.0],[23.2,44.8]]},
  {id:"tunis",s:"Tunis",n:"Sultanat hafside",c:"out",k:0,h:"",t:"",p:[[9.5,36.9],[10.5,36.7]]}
 ],
 points:[
@@ -125,17 +148,23 @@ points:[
  ["Lucques",10.5,43.84,"ville",""],["Sienne",11.33,43.32,"ville",""],["Arezzo",11.88,43.46,"ville",""],["Pérouse",12.39,43.11,"ville",""],["Ancône",13.51,43.62,"ville",""],
  ["Assise",12.61,43.07,"ville",""],["Orvieto",12.11,42.72,"ville",""],["Anagni",13.15,41.73,"ville",""],["L'Aquila",13.4,42.35,"ville",""],["Bari",16.87,41.12,"ville",""],
  ["Salerne",14.75,40.68,"ville",""],["Tarente",17.25,40.47,"ville",""],["Reggio",15.65,38.1,"ville",""],["Messine",15.55,38.19,"ville",""],["Catane",15.08,37.5,"ville",""],
- ["Cagliari",9.11,39.22,"ville",""],["Udine",13.23,46.06,"ville",""],["Trente",11.12,46.07,"ville",""],["Raguse",18.1,42.65,"ville",""]
+ ["Cagliari",9.11,39.22,"ville",""],["Udine",13.23,46.06,"ville",""],["Trente",11.12,46.07,"ville",""],["Raguse",18.1,42.65,"ville",""],
+ ["Split",16.44,43.51,"ville","Charles Robert y débarque en 1300."],["Trogir",16.25,43.52,"ville",""],["Šibenik",15.9,43.73,"ville",""],["Bribir",15.82,43.93,"ville","Berceau des Šubić."],["Zagreb",15.98,45.81,"ville",""],["Székesfehérvár",18.41,47.15,"ville","Ville du sacre des rois de Hongrie.",1],["Belgrade",20.46,44.82,"ville",""],["Scutari",19.51,42.07,"ville",""],["Skopje",21.43,42.0,"ville",""],["Durazzo",19.45,41.32,"ville","Port angevin, tête de la Via Egnatia.",1],["Valona",19.49,40.47,"ville",""],["Corfou",19.92,39.62,"ville","",1],["Arta",20.98,39.16,"ville",""],["Thessalonique",22.95,40.64,"ville","",1],["Athènes",23.73,37.98,"ville","",1],["Thèbes",23.32,38.32,"ville",""],["Négrepont",23.6,38.46,"ville",""],["Andravida",21.27,37.9,"ville","Capitale des princes d'Achaïe."],["Glarentza",21.15,37.93,"ville",""],["Mistra",22.37,37.07,"ville",""],["Modon",21.7,36.82,"ville",""],["Sofia",23.32,42.7,"ville",""]
 ],
 events:[
  {d:"30 mars 1282",t:"Vêpres siciliennes",x:"Palerme se soulève contre Charles d'Anjou ; la Sicile passe aux Aragonais.",at:[13.36,38.12]},
+ {d:"août 1300",t:"Charles Robert à Split",x:"Appelé par Paul Šubić, le jeune Angevin débarque en Dalmatie pour conquérir la Hongrie.",at:[16.44,43.51]},
  {d:"27 janv. 1302",t:"Exil de Dante",x:"Les Guelfes noirs, maîtres de Florence, condamnent le poète, Guelfe blanc, à l'exil.",at:[11.25,43.77]},
  {d:"31 août 1302",t:"Paix de Caltabellotta",x:"Frédéric d'Aragon garde l'île comme « roi de Trinacrie » ; les Angevins conservent la péninsule.",at:[13.22,37.57]},
  {d:"7 sept. 1303",t:"Attentat d'Anagni",x:"Nogaret et Sciarra Colonna humilient le pape Boniface VIII, qui meurt un mois plus tard.",at:[13.15,41.73]},
  {d:"1308‑1309",t:"Guerre de Ferrare",x:"Venise perd Ferrare face au pape, qui l'excommunie.",at:[11.62,44.84]},
  {d:"1309",t:"Robert d'Anjou, roi",x:"Robert le Sage succède à son père Charles II et devient le chef du parti guelfe.",at:[14.25,40.85]},
+ {d:"1307",t:"Philippe de Tarente, prince d'Achaïe",x:"Charles II dépossède Philippe de Savoie de la Morée franque au profit de son fils.",at:[21.27,37.9]},
  {d:"15 juin 1310",t:"Conjuration de Tiepolo",x:"Venise écrase le complot contre le doge et crée le Conseil des Dix.",at:[12.33,45.44]},
+ {d:"27 août 1310",t:"Sacre de Charles Robert",x:"Troisième couronnement, enfin avec la Sainte Couronne, à Székesfehérvár.",at:[18.41,47.15]},
+ {d:"1310",t:"Les Catalans à Athènes",x:"Gautier de Brienne engage la Compagnie catalane contre la Thessalie.",at:[23.32,38.32]},
  {d:"oct. 1310",t:"Henri VII passe les Alpes",x:"Par le mont Cenis, l'empereur élu entre en Piémont et gagne Turin puis Asti.",at:[7.05,45.15]},
+ {d:"15 mars 1311",t:"Bataille du Céphise",x:"La Compagnie catalane écrase la chevalerie franque et tue le duc d'Athènes.",at:[22.97,38.49]},
  {d:"6 janv. 1311",t:"Couronne de fer",x:"Henri VII est couronné roi d'Italie à Milan.",at:[9.19,45.46]},
  {d:"mai‑sept. 1311",t:"Siège de Brescia",x:"La ville guelfe résiste quatre mois ; le frère de l'empereur y est tué.",at:[10.22,45.54]},
  {d:"29 juin 1312",t:"Couronnement impérial",x:"Henri VII est couronné empereur au Latran.",at:[12.5,41.89]},
@@ -148,13 +177,20 @@ overview:`<p class="panel-eyebrow">Année 1310</p><h2>Guelfes contre Gibelins</h
 <div class="stats"><div><b>{N}</b><span>puissances figurées</span></div><div><b>2</b><span>rois de « Sicile »</span></div><div><b>{V}</b><span>villes</span></div></div>
 <p>Henri VII arrive pour réconcilier les partis ; il finira chef des Gibelins, en guerre contre Florence et Robert de Naples.</p>
 <p style="color:var(--muted)">Cliquez sur un territoire ou cherchez-le dans l'index.</p>`,
-seas:[["Mer Tyrrhénienne",11.7,39.8,15],["Mer Adriatique",15.3,43.0,14],["Mer Ionienne",17.8,38.3,13],["Mer Ligure",8.8,43.6,12]],
+seas:[["Mer Tyrrhénienne",11.7,39.8,15],["Mer Adriatique",15.3,43.0,14],["Mer Ionienne",18.6,38.0,14],["Mer Ligure",8.8,43.6,12],["Mer Égée",23.7,37.0,12]],
 land:[
- [[6.4,47.3],[19.1,47.3],[19.1,42.0],[18.55,42.4],[18.1,42.65],[17.5,43.0],[16.4,43.5],[15.9,43.7],[15.2,44.2],[14.9,44.6],[14.4,45.33],[14.2,45.1],[13.9,44.85],[13.6,45.1],[13.75,45.65],[13.5,45.75],[13.1,45.65],[12.6,45.5],[12.3,45.4],[12.25,45.2],[12.4,44.9],[12.3,44.6],[12.57,44.06],[13.0,43.85],[13.5,43.6],[13.9,42.95],[14.2,42.45],[14.7,42.1],[15.15,41.92],[16.0,41.95],[16.2,41.9],[15.95,41.6],[16.3,41.3],[16.87,41.12],[17.5,40.8],[17.95,40.65],[18.5,40.15],[18.37,39.8],[18.0,40.05],[17.25,40.45],[16.6,40.1],[16.6,39.7],[17.13,39.08],[16.55,38.75],[16.25,38.25],[15.65,37.95],[15.65,38.25],[15.85,38.65],[16.2,38.95],[16.05,39.35],[15.75,39.9],[15.4,40.05],[14.99,40.35],[14.75,40.68],[14.33,40.6],[14.45,40.75],[14.25,40.83],[14.05,40.8],[13.9,41.2],[13.57,41.2],[13.05,41.25],[12.62,41.45],[12.25,41.75],[11.8,42.1],[11.2,42.4],[11.0,42.75],[10.5,42.95],[10.5,43.3],[10.3,43.55],[10.25,43.9],[10.0,44.05],[9.83,44.1],[9.2,44.3],[8.93,44.41],[8.45,44.3],[8.2,43.98],[7.8,43.8],[7.27,43.69],[7.0,43.55],[6.65,43.25],[6.4,43.15]],
+ [[6.4,47.3],[24.4,47.3],[24.4,40.9],[23.9,40.78],[23.75,40.65],[23.95,40.45],[24.25,40.18],[24.0,40.15],[23.75,40.38],[23.7,40.15],[23.95,39.95],[23.7,39.93],[23.35,40.2],[23.35,40.0],[23.0,40.3],[22.95,40.6],[22.6,40.5],[22.6,40.25],[22.85,39.9],[22.95,39.55],[23.25,39.3],[23.3,39.1],[22.95,39.2],[22.85,38.95],[22.6,38.85],[22.95,38.75],[23.3,38.55],[23.55,38.4],[23.75,38.28],[23.95,38.18],[24.0,38.0],[24.03,37.68],[23.85,37.8],[23.65,37.95],[23.4,37.97],[23.15,37.9],[22.98,37.95],[22.9,38.1],[22.6,38.2],[22.4,38.38],[22.15,38.3],[21.85,38.38],[21.6,38.32],[21.4,38.35],[21.1,38.5],[20.95,38.7],[20.75,38.85],[20.75,38.97],[20.6,39.05],[20.4,39.3],[20.25,39.5],[20.0,39.75],[20.0,39.9],[19.75,40.1],[19.4,40.3],[19.3,40.45],[19.45,40.55],[19.35,40.85],[19.45,41.1],[19.45,41.32],[19.55,41.5],[19.55,41.8],[19.25,41.9],[19.1,42.1],[18.85,42.28],[18.6,42.42],[18.55,42.4],[18.1,42.65],[17.5,43.0],[16.4,43.5],[15.9,43.7],[15.2,44.2],[14.9,44.6],[14.4,45.33],[14.2,45.1],[13.9,44.85],[13.6,45.1],[13.75,45.65],[13.5,45.75],[13.1,45.65],[12.6,45.5],[12.3,45.4],[12.25,45.2],[12.4,44.9],[12.3,44.6],[12.57,44.06],[13.0,43.85],[13.5,43.6],[13.9,42.95],[14.2,42.45],[14.7,42.1],[15.15,41.92],[16.0,41.95],[16.2,41.9],[15.95,41.6],[16.3,41.3],[16.87,41.12],[17.5,40.8],[17.95,40.65],[18.5,40.15],[18.37,39.8],[18.0,40.05],[17.25,40.45],[16.6,40.1],[16.6,39.7],[17.13,39.08],[16.55,38.75],[16.25,38.25],[15.65,37.95],[15.65,38.25],[15.85,38.65],[16.2,38.95],[16.05,39.35],[15.75,39.9],[15.4,40.05],[14.99,40.35],[14.75,40.68],[14.33,40.6],[14.45,40.75],[14.25,40.83],[14.05,40.8],[13.9,41.2],[13.57,41.2],[13.05,41.25],[12.62,41.45],[12.25,41.75],[11.8,42.1],[11.2,42.4],[11.0,42.75],[10.5,42.95],[10.5,43.3],[10.3,43.55],[10.25,43.9],[10.0,44.05],[9.83,44.1],[9.2,44.3],[8.93,44.41],[8.45,44.3],[8.2,43.98],[7.8,43.8],[7.27,43.69],[7.0,43.55],[6.65,43.25],[6.4,43.15]],
  [[12.43,37.8],[12.5,38.02],[12.75,38.15],[13.1,38.2],[13.36,38.12],[13.75,38.0],[14.3,38.02],[15.0,38.15],[15.65,38.27],[15.28,37.85],[15.1,37.5],[15.25,37.1],[15.1,36.68],[14.45,36.75],[14.25,37.06],[13.55,37.27],[13.08,37.5],[12.6,37.6]],
  [[8.22,40.93],[8.4,40.84],[8.71,40.91],[9.2,41.25],[9.6,41.0],[9.75,40.5],[9.7,40.0],[9.6,39.5],[9.52,39.14],[9.1,39.2],[8.85,38.9],[8.6,38.9],[8.4,39.1],[8.45,39.6],[8.55,39.9],[8.5,40.3],[8.3,40.56],[8.15,40.75]],
  [[9.35,43.0],[9.45,42.7],[9.55,42.1],[9.4,41.6],[9.2,41.37],[8.8,41.6],[8.6,41.9],[8.6,42.3],[8.75,42.6],[9.1,42.7]],
  [[10.1,42.82],[10.45,42.85],[10.4,42.72],[10.15,42.73]],
+ [[22.98,37.92],[23.15,37.85],[23.4,37.65],[23.15,37.55],[22.85,37.55],[23.05,37.3],[23.1,36.95],[23.05,36.7],[23.2,36.45],[22.95,36.5],[22.75,36.8],[22.55,36.75],[22.5,36.4],[22.35,36.6],[22.15,37.0],[21.95,36.8],[21.7,36.8],[21.65,37.0],[21.7,37.3],[21.55,37.55],[21.3,37.65],[21.12,37.88],[21.35,38.2],[21.75,38.3],[22.1,38.15],[22.45,38.05],[22.75,37.98]],
+ [[22.85,39.02],[23.25,39.0],[23.6,38.75],[24.05,38.6],[24.4,38.4],[24.4,38.05],[24.1,38.2],[23.85,38.38],[23.62,38.47],[23.35,38.65],[23.05,38.85]],
+ [[19.63,39.78],[19.9,39.82],[19.95,39.68],[20.12,39.42],[19.98,39.43],[19.85,39.6],[19.72,39.65]],
+ [[20.35,38.2],[20.45,38.45],[20.6,38.48],[20.8,38.12],[20.55,38.08]],
+ [[20.62,37.85],[20.75,37.95],[20.95,37.75],[20.8,37.65]],
+ [[20.6,38.8],[20.72,38.85],[20.73,38.62],[20.6,38.62]],
+ [[14.45,45.2],[14.7,45.1],[14.8,44.95],[14.55,44.95],[14.45,45.05]],
  [[7.9,36.4],[8.6,36.9],[9.2,37.25],[9.87,37.3],[10.25,37.0],[10.55,36.85],[11.05,37.08],[11.1,36.4]]
 ],
 waters:[
@@ -166,6 +202,8 @@ rivers:[
  [[7.3,45.0],[7.68,45.07],[8.45,45.13],[9.16,45.19],[9.69,45.05],[10.02,45.13],[10.79,45.16],[11.5,45.0],[12.4,44.95]],
  [[10.9,43.95],[11.25,43.77],[10.8,43.68],[10.4,43.68],[10.3,43.68]],
  [[11.9,43.8],[12.1,43.3],[12.4,42.85],[12.5,42.4],[12.48,41.9],[12.25,41.75]],
+ [[18.85,47.2],[18.9,46.6],[18.85,46.0],[19.3,45.3],[19.85,45.25],[20.46,44.82],[21.4,44.75],[22.1,44.6],[22.6,44.6],[22.7,44.2],[23.0,43.85],[24.4,43.7]],
+ [[14.5,46.05],[15.95,45.8],[17.0,45.25],[18.3,45.1],[19.3,44.95],[20.46,44.82]],
  [[11.1,46.5],[11.12,46.07],[11.0,45.6],[10.99,45.44],[11.6,45.2],[12.3,45.2]]
 ]
 };
